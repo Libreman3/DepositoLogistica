@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int menu, num;
+    int num;
 
     cout << " -----------------------------------------------" << endl;
     cout << "| BIENVENIDO AL SISTEMA GESTION PARA LOGISTICAS |" << endl;
@@ -21,9 +21,9 @@ int main()
         cout << "   3. CLIENTES" << endl;
         cout << "   4. MOVIMIENTOS" << endl;
         cout << "   0. SALIR" << endl;
-        cin>>menu;
+        cin>>num;
 
-        switch(menu){
+        switch(num){
             case 1:
                 while(true){
                     system("cls");
