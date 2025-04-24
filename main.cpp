@@ -40,7 +40,6 @@ int main()
                         case 1:
                             system("cls");
                             cout << "funcion de cargar proveedor" << endl;
-                            proveedor.Cargar();
                             system("pause");
                             break;
                         case 2:
