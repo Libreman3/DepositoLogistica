@@ -5,7 +5,6 @@ using namespace std;
 int main()
 {
     int menu, num;
-    Proveedor proveedor;
 
     cout << " -----------------------------------------------" << endl;
     cout << "| BIENVENIDO AL SISTEMA GESTION PARA LOGISTICAS |" << endl;
