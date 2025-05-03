@@ -1,2 +1,1 @@
-# DepositoLogistica
-Trabajo Final Programacion II - Grupo 46
+# TrabajoFinal

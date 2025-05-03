@@ -1,4 +1,66 @@
 # depslib dependency file v1.0
-1745507148 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal\main.cpp
+1746043435 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal\main.cpp
 	<iostream>
+	"proveedor.h"
+	"Menu.h"
+
+1745522640 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal\proveedor.cpp
+	<iostream>
+	"proveedor.h"
+
+1746042787 c:\users\dairy\onedrive\documents\programacion\trabajofinal\proveedor.h
+	<string>
+
+1746039741 c:\users\dairy\onedrive\documents\programacion\trabajofinal\menu.h
+
+1746043435 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal\menu.cpp
+	<iostream>
+	"menu.h"
+	"ProveedorManager.h"
+
+1746042787 c:\users\dairy\onedrive\documents\programacion\trabajofinal\proveedormanager.h
+
+1746043435 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal\proveedormanager.cpp
+	<iostream>
+	<string>
+	"ProveedorManager.h"
+	"proveedor.h"
+
+1746029238 source:c:\users\dios no esta muerto\documents\programacion\prueba\guia poo\trabajofinal-main\main.cpp
+	<iostream>
+	"proveedor.h"
+	"Menu.h"
+
+1746234668 c:\users\dios no esta muerto\documents\programacion\prueba\guia poo\trabajofinal-main\proveedor.h
+	<string>
+
+1746029238 c:\users\dios no esta muerto\documents\programacion\prueba\guia poo\trabajofinal-main\menu.h
+
+1746232298 source:c:\users\dios no esta muerto\documents\programacion\prueba\guia poo\trabajofinal-main\menu.cpp
+	<iostream>
+	"menu.h"
+	"ProveedorManager.h"
+
+1746232379 c:\users\dios no esta muerto\documents\programacion\prueba\guia poo\trabajofinal-main\proveedormanager.h
+
+1746234668 source:c:\users\dios no esta muerto\documents\programacion\prueba\guia poo\trabajofinal-main\proveedor.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"proveedor.h"
+
+1746233187 source:c:\users\dios no esta muerto\documents\programacion\prueba\guia poo\trabajofinal-main\proveedorarchivo.cpp
+	<iostream>
+	"proveedorArchivo.h"
+
+1746232298 c:\users\dios no esta muerto\documents\programacion\prueba\guia poo\trabajofinal-main\proveedorarchivo.h
+	<string>
+	"proveedor.h"
+
+1746233828 source:c:\users\dios no esta muerto\documents\programacion\prueba\guia poo\trabajofinal-main\proveedormanager.cpp
+	<iostream>
+	<string>
+	"ProveedorManager.h"
+	"proveedor.h"
+	"proveedorArchivo.h"
 

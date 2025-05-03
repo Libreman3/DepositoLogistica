@@ -32,11 +32,23 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="ProveedorManager.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="proveedor.cpp" />
 		<Unit filename="proveedor.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="proveedorArchivo.cpp" />
+		<Unit filename="proveedorArchivo.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="proveedorManager.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
