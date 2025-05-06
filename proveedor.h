@@ -8,7 +8,7 @@ private:
     char _razonSocial[50];
     char _direccion[50];
     char _mail[50];
-    bool _eliminado;
+    bool _estado;
 public:
     int getNumeroProveedor();
     void setNumeroProveedor(int numeroProveedor);
@@ -25,11 +25,11 @@ public:
     std::string getMail();
     void setMail(std::string mail);
 
-    bool getEliminado();
-    void setEliminado(bool eliminado);
+    bool getEstado();
+    void setEstado(bool estado);
 
     Proveedor();
-    Proveedor(int numeroProveedor,int cuit, std::string razonSocial,std::string direccion,std::string mail,bool eliminado);
+    Proveedor(int numeroProveedor,int cuit, std::string razonSocial,std::string direccion,std::string mail,bool estado);
 
     void tarjetaProveedor();
 

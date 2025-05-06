@@ -8,8 +8,14 @@ private:
 public:
     ProveedorArchivo();
     ProveedorArchivo(std::string nombreArchivo);
+
     bool guardar(Proveedor registro);
     int getCantidadProveedores();
-
     Proveedor leer(int pos);
+
+    bool modificar(Proveedor registro, int posicion);
+
+    int buscarId(int idProveedor);
+    int buscarCuit(int cuitProveedor);
+    //string buscar (string razonSocial);
 };

@@ -36,6 +36,7 @@ void Menu::mostrar(){
                     cout << "   3. BUSCAR PROVEEDOR" << endl;
                     cout << "   4. MODIFICAR PROVEEDOR" << endl;
                     cout << "   5. ELIMINAR PROVEEDOR" << endl;
+                    cout << "   6. RESTAURAR PROVEEDOR ELIMINADO" << endl;
                     cout << "   0. VOLVER" << endl<<endl;
                     cin>>num;
 
@@ -52,18 +53,23 @@ void Menu::mostrar(){
                             break;
                         case 3:
                             system("cls");
-                            cout << "funcion de buscar proveedor" << endl;
+                            proveedorManager.buscar();
                             system("pause");
                             break;
                         case 4:
                             system("cls");
-                            cout << "funcion de modificar proveedor" << endl;
+                            proveedorManager.modificar();
                             system("pause");
                             break;
                         case 5:
                             system("cls");
-                            cout << "funcion de eliminar proveedor" << endl;
-                           system("pause");
+                            proveedorManager.eliminar();
+                            system("pause");
+                            break;
+                        case 6:
+                            system("cls");
+                            proveedorManager.restaurar();
+                            system("pause");
                             break;
                         case 0:
                            system("cls");

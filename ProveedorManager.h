@@ -6,8 +6,8 @@ private:
 public:
     void cargar();
     void mostrar();
-
-    //void consultar();
-    //void modificar();
-    //void eliminar();
+    void buscar();
+    void modificar();
+    void eliminar();
+    void restaurar();
 };

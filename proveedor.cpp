@@ -40,11 +40,11 @@ void Proveedor::setMail(std::string mail){
     strcpy(_mail,mail.c_str());
 }
 
-bool Proveedor::getEliminado(){
-    return _eliminado;
+bool Proveedor::getEstado(){
+    return _estado;
 }
-void Proveedor::setEliminado(bool eliminado){
-    _eliminado=eliminado;
+void Proveedor::setEstado(bool estado){
+    _estado=estado;
 }
 
 Proveedor::Proveedor(){
@@ -53,15 +53,15 @@ Proveedor::Proveedor(){
     strcpy(_razonSocial, "");
     strcpy(_direccion, "");
     strcpy(_mail, "");
-    _eliminado= false;
+    _estado= true;
 }
-Proveedor::Proveedor(int numeroProveedor,int cuit, std::string razonSocial,std::string direccion,std::string mail,bool eliminado){
+Proveedor::Proveedor(int numeroProveedor,int cuit, std::string razonSocial,std::string direccion,std::string mail,bool estado){
     setNumeroProveedor(numeroProveedor);
     setCuit(cuit);
     setRazonSocial(razonSocial);
     setDireccion(direccion);
     setMail(mail);
-    setEliminado(eliminado);
+    setEstado(estado);
 }
 
 void Proveedor::tarjetaProveedor(){
