@@ -64,38 +64,38 @@
 	"proveedor.h"
 	"proveedorArchivo.h"
 
-1746466498 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\main.cpp
+1747420870 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\main.cpp
 	<iostream>
 	"proveedor.h"
 	"Menu.h"
 
-1746472062 c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedor.h
+1747420870 c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedor.h
 	<string>
 
-1746466498 c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\menu.h
+1747420870 c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\menu.h
 
-1746469755 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\menu.cpp
+1747424202 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\menu.cpp
 	<iostream>
 	"menu.h"
 	"ProveedorManager.h"
 
-1746469755 c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedormanager.h
+1747421949 c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedormanager.h
 
-1746466499 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedorarchivo.cpp
+1747420870 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedorarchivo.cpp
 	<iostream>
 	"proveedorArchivo.h"
 
-1746466499 c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedorarchivo.h
+1747420870 c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedorarchivo.h
 	<string>
 	"proveedor.h"
 
-1746470084 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedor.cpp
+1747420870 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedor.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"proveedor.h"
 
-1746470490 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedormanager.cpp
+1747424202 source:c:\users\dairy\onedrive\documents\programacion\trabajofinal-main\trabajofinal-main\proveedormanager.cpp
 	<iostream>
 	<string>
 	"ProveedorManager.h"

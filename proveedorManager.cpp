@@ -14,25 +14,48 @@ void ProveedorManager::cargar(){    //ACA SE CARGA CADA PERFIL DE PROVEEDOR
     Proveedor proveedor;
     ProveedorArchivo pArchivo;
 
-    cout<< "Ingrese numero de Proveedor:";
-    cin>>numeroProveedor;
+    cout<<"------- CARGAR PROVEEDOR -------"<<endl;
+    cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+    cout<< "Ingrese numero de Proveedor:";    //ESTO EN REALIDAD NO LO DEBERIA PREGUNTAR
+    cin>>numeroProveedor;                     //SEDEBERIA CARGAR AUTOMATICAMENTE
     cout<< "Ingrese numero de CUIT: ";
     cin>>cuit;
+    if(cuit==0){
+        return;
+    }
+    while(cuit<1000000 || cuit>100000000){
+        cout<< "El cuit ingresado es incorrecto, por favor intente nuevamente: ";
+        cin>>cuit;
+        if(cuit==0){
+            return;
+        }
+    }
     cout<< "Ingrese Razon Social:";
     cin.ignore();
     getline(cin,razonSocial);
+    if(razonSocial=="0"){
+        return;
+    }
     cout<< "Ingrese direccion:";
     getline(cin,direccion);
+    if(direccion=="0"){
+        return;
+    }
     cout<< "Ingrese mail:";
     getline(cin,mail);
+    if(mail=="0"){
+        return;
+    }
     estado = true;
 
     proveedor = Proveedor(numeroProveedor,cuit, razonSocial, direccion, mail, estado);
 
     if(pArchivo.guardar(proveedor)){    // AL FINALIZAR LA CARGA TE MUESTRA SI ESTA TODO OK O SI HUBO ALGUN ERROR
-        cout<<"Se guardo correctamente!"<<endl;
+        cout<<endl<<"Se guardo correctamente!"<<endl<<endl;
+        system("pause");
     }else{
-        cout<< "error inesperado"<<endl;
+        cout<<endl<< "Error inesperado!"<<endl<<endl;
+        system("pause");
     }
 }
 
@@ -58,8 +81,13 @@ void ProveedorManager::buscar(){
     int cuitBuscado;
     bool encontrado = false;
 
-    cout<< "INGRESE EL CUIT QUE DESEA BUSCAR: ";
+    cout<<"------ BUSCAR PROVEEDOR ------"<<endl;
+    cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+    cout<< "Ingrese el cuit del proveedor que desea buscar: ";
     cin>>cuitBuscado;
+    if(cuitBuscado==0){
+        return;
+    }
 
     int cantidadRegistros = pArchivo.getCantidadProveedores();
 
@@ -73,8 +101,9 @@ void ProveedorManager::buscar(){
         }
     }
     if (encontrado == false){
-        cout << "NO SE ENCONTRO PROVEEDOR CON EL NUMERO DE CUIT INGRESADO"<<endl;
+        cout <<endl<< "NO SE ENCONTRO PROVEEDOR CON EL NUMERO DE CUIT INGRESADO!"<<endl<<endl;
     }
+    system("pause");
 }
 
 void ProveedorManager::modificar(){
@@ -83,8 +112,13 @@ void ProveedorManager::modificar(){
 
     int idProveedor;
 
-    cout << "INGRESE EL ID DEL PROVEEDOR QUE DESEA MODIFICAR: ";
+    cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
+    cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+    cout << "Ingrese el ID del proveedor que desea modificar: ";
     cin >> idProveedor;
+    if(idProveedor==0){
+        return;
+    }
 
     int posicion = pArchivo.buscarId(idProveedor);
 
@@ -94,7 +128,8 @@ void ProveedorManager::modificar(){
         string razonSocial, direccion, mail;
 
         system("cls");
-        cout<< "INGRESE QUE DATO QUIERE MODIFICAR:"<<endl;
+        cout<<"------ MODIFICAR PROVEEDOR ------"<<endl<<endl;
+        cout<< "INGRESE QUE DATO DESEA MODIFICAR:"<<endl;
         cout<< "1. Numero de CUIT"<<endl;
         cout<< "2. Razon Social"<<endl;
         cout<< "3. Direccion"<<endl;
@@ -106,57 +141,85 @@ void ProveedorManager::modificar(){
         switch(dato){
         case 1:
             system("cls");
-            cout << "INGRESE EL NUEVO NUMERO DE CUIT: ";
+            cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
+            cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+            cout << "Ingrese el nuevo numero de cuit: ";
             cin >> cuit;
+            if(cuit==0){
+                return;
+            }
+            while(cuit<1000000 || cuit>100000000){
+                cout<< "El cuit ingresado es incorrecto, por favor intente nuevamente: ";
+                cin>>cuit;
+                if(cuit==0){
+                    return;
+                }
+            }
             registro.setCuit(cuit);
             if(pArchivo.modificar(registro,posicion)){
-                cout<< "PROVEEDOR MODIFICADO"<<endl;
+                cout<<endl<< "PROVEEDOR MODIFICADO"<<endl<<endl;
             } else{
-                cout << "HUBO UN ERROR INESPERADO"<<endl;
+                cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
             }
             return;
         case 2:
             system("cls");
-            cout<< "INGRESE LA NUEVA RAZON SOCIAL: ";
+            cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
+            cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+            cout<< "Ingrese la nueva razon social: ";
             cin>> razonSocial;
+            if(razonSocial=="0"){
+                return;
+            }
             registro.setRazonSocial(razonSocial);
             if(pArchivo.modificar(registro,posicion)){
-                cout << "PROVEEDOR MODIFICADO"<<endl;
+                cout <<endl<< "PROVEEDOR MODIFICADO"<<endl<<endl;
             }else{
-                cout << "HUBO UN ERROR INESPERADO"<<endl;
+                cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
             }
             break;
         case 3:
             system("cls");
-            cout << "INGRESE LA NUEVA DIRECCION: ";
+            cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
+            cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+            cout << "Ingrese la nueva direccion: ";
             cin >> direccion;
+            if(direccion=="0"){
+                return;
+            }
             registro.setDireccion(direccion);
             if(pArchivo.modificar(registro,posicion)){
-                cout << "PROVEEDOR MODIFICADO"<<endl;
+                cout <<endl<< "PROVEEDOR MODIFICADO"<<endl<<endl;
             }else{
-                cout << "HUBO UN ERROR INESPERADO"<<endl;
+                cout <<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
             }
             break;
         case 4:
             system("cls");
-            cout << "INGRESE EL NUEVO MAIL: "<<endl;
+            cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
+            cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+            cout << "Ingrese el nuevo mail: "<<endl;
             cin >> mail;
+            if(mail=="0"){
+                return;
+            }
             registro.setMail(mail);
             if(pArchivo.modificar(registro,posicion)){
-                cout << "PROVEEDOR MODIFICADO"<< endl;
+                cout <<endl<< "PROVEEDOR MODIFICADO"<< endl<<endl;
             }else{
-                cout << "HUBO UN ERROR INESPERADO"<<endl;
+                cout <<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
             }
             break;
         case 0:
             break;
         default:
-            cout << "OPCION INCORRECTA" <<endl;
+            cout <<endl<< "OPCION INCORRECTA" <<endl<<endl;
             break;
         }
     }else{
-        cout << "NO EXISTE EL ID INGRESADO"<<endl;
+        cout <<endl<< "NO EXISTE EL ID INGRESADO"<<endl<<endl;
     }
+    system("pause");
 }
 
 void ProveedorManager::eliminar(){
@@ -166,8 +229,13 @@ void ProveedorManager::eliminar(){
 
     int cuitEliminar;
 
-    cout << "INGRESE EL CUIT DEL PROVEEDOR QUE DESEA ELIMINAR: ";
+    cout<<"------ ELIMINAR PROVEEDOR ------"<<endl;
+    cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+    cout <<"Ingrese el cuit del proveedor que desea eliminar: ";
     cin >> cuitEliminar;
+    if(cuitEliminar==0){
+        return;
+    }
 
     int posicion = pArchivo.buscarCuit(cuitEliminar);
 
@@ -175,14 +243,15 @@ void ProveedorManager::eliminar(){
         Proveedor registro = pArchivo.leer(posicion);
         registro.setEstado(false);
         if(pArchivo.modificar(registro, posicion)){
-            cout << "PROVEEDOR ELIMINADO"<< endl;
+            cout <<endl<< "PROVEEDOR ELIMINADO"<<endl<<endl;
         }else{
-            cout << "HUBO UN ERROR"<<endl;
+            cout <<endl<< "HUBO UN ERROR"<<endl<<endl;
         }
 
     }else{
-        cout<< "NO EXISTE EL CUIT INGRESADO"<<endl;
+        cout<<endl<< "NO EXISTE EL CUIT INGRESADO"<<endl<<endl;
     }
+    system("pause");
 }
 
 void ProveedorManager::restaurar(){
@@ -192,8 +261,13 @@ void ProveedorManager::restaurar(){
 
     int cuitRestaurar;
 
-    cout << "INGRESE EL CUIT DEL PROVEEDOR ELIMINADO QUE DESEA RESTAURAR: ";
+    cout<<"------ RESTAURAR PROVEEDOR ------"<<endl;
+    cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+    cout << "Ingrese el cuit del proveedor eliminado que desea restarurar :";
     cin >> cuitRestaurar;
+    if(cuitRestaurar==0){
+        return;
+    }
 
     int posicion = pArchivo.buscarCuit(cuitRestaurar);
 
@@ -201,12 +275,13 @@ void ProveedorManager::restaurar(){
         Proveedor registro = pArchivo.leer(posicion);
         registro.setEstado(true);
         if(pArchivo.modificar(registro, posicion)){
-            cout << "PROVEEDOR RESTAURADO"<< endl;
+            cout <<endl<< "PROVEEDOR RESTAURADO"<< endl<<endl;
         }else{
-            cout << "HUBO UN ERROR"<<endl;
+            cout <<endl<< "HUBO UN ERROR"<<endl<<endl;
         }
 
     }else{
-        cout<< "NO EXISTE EL CUIT INGRESADO"<<endl;
+        cout<<endl<< "NO EXISTE EL CUIT INGRESADO"<<endl<<endl;
     }
+    system("pause");
 }

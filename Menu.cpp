@@ -44,7 +44,6 @@ void Menu::mostrar(){
                         case 1:
                             system("cls");
                             proveedorManager.cargar();
-                            system("pause");
                             break;
                         case 2:
                             system("cls");
@@ -54,22 +53,18 @@ void Menu::mostrar(){
                         case 3:
                             system("cls");
                             proveedorManager.buscar();
-                            system("pause");
                             break;
                         case 4:
                             system("cls");
                             proveedorManager.modificar();
-                            system("pause");
                             break;
                         case 5:
                             system("cls");
                             proveedorManager.eliminar();
-                            system("pause");
                             break;
                         case 6:
                             system("cls");
                             proveedorManager.restaurar();
-                            system("pause");
                             break;
                         case 0:
                            system("cls");
