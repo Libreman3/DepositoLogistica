@@ -140,3 +140,67 @@
 	"proveedor.h"
 	"proveedorArchivo.h"
 
+1747410352 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\main.cpp
+	<iostream>
+	"proveedor.h"
+	"Menu.h"
+
+1747410352 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedor.h
+	<string>
+
+1747410352 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\menu.h
+
+1747410352 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\menu.cpp
+	<iostream>
+	"menu.h"
+	"ProveedorManager.h"
+
+1747410352 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedormanager.h
+
+1747410352 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedor.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"proveedor.h"
+
+1747410352 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedorarchivo.cpp
+	<iostream>
+	"proveedorArchivo.h"
+
+1747410352 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedorarchivo.h
+	<string>
+	"proveedor.h"
+
+1747410352 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedormanager.cpp
+	<iostream>
+	<string>
+	"ProveedorManager.h"
+	"proveedor.h"
+	"proveedorArchivo.h"
+
+1747611359 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\cliente.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"cliente.h"
+
+1747611325 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\cliente.h
+	<string>
+
+1747611924 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\clientearchivo.cpp
+	<iostream>
+	"clienteArchivo.h"
+
+1747611924 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\clientearchivo.h
+	<string>
+	"cliente.h"
+
+1747612957 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\clientemanager.cpp
+	<iostream>
+	<string>
+	"clienteManager.h"
+	"cliente.h"
+	"clienteArchivo.h"
+
+1747610304 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\clientemanager.h
+

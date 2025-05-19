@@ -263,7 +263,7 @@ void ProveedorManager::restaurar(){
 
     cout<<"------ RESTAURAR PROVEEDOR ------"<<endl;
     cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-    cout << "Ingrese el cuit del proveedor eliminado que desea restarurar :";
+    cout << "Ingrese el cuit del proveedor eliminado que desea restaurar :";
     cin >> cuitRestaurar;
     if(cuitRestaurar==0){
         return;

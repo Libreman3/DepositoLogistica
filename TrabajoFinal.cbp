@@ -39,6 +39,18 @@
 		<Unit filename="ProveedorManager.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="cliente.cpp" />
+		<Unit filename="cliente.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="clienteArchivo.cpp" />
+		<Unit filename="clienteArchivo.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="clienteManager.cpp" />
+		<Unit filename="clienteManager.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="proveedor.cpp" />
 		<Unit filename="proveedor.h">
