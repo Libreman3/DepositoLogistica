@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,19 +38,15 @@
 		<Unit filename="Menu.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="MenuProducto.cpp" />
+		<Unit filename="MenuProducto.h" />
+		<Unit filename="Producto.cpp" />
+		<Unit filename="Producto.h" />
+		<Unit filename="ProductoArchivo.cpp" />
+		<Unit filename="ProductoArchivo.h" />
+		<Unit filename="ProductoManager.cpp" />
+		<Unit filename="ProductoManager.h" />
 		<Unit filename="ProveedorManager.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="cliente.cpp" />
-		<Unit filename="cliente.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="clienteArchivo.cpp" />
-		<Unit filename="clienteArchivo.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="clienteManager.cpp" />
-		<Unit filename="clienteManager.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.cpp" />

@@ -1,13 +1,11 @@
 #include <iostream>
 #include "menu.h"
 #include "ProveedorManager.h"
-#include "clienteManager.h"
 
 using namespace std;
 
 void Menu::mostrar(){
     ProveedorManager proveedorManager;
-    ClienteManager clienteManager;
 
     int num;
 
@@ -132,38 +130,31 @@ void Menu::mostrar(){
                     system("cls");
                     cout << "  ---- CLIENTES ----" << endl<<endl;
                     cout << "   1. CARGAR CLIENTE" << endl;
-                    cout << "   2. MOSTRAR CLIENTES" << endl;
-                    cout << "   3. BUSCAR CLIENTE" << endl;
-                    cout << "   4. MODIFICAR CLIENTE" << endl;
-                    cout << "   5. ELIMINAR CLIENTE" << endl;
-                    cout << "   6. RESTAURAR CLIENTE ELIMINADO" << endl;
+                    cout << "   2. CONSULTAR CLIENTE" << endl;
+                    cout << "   3. MODIFICAR CLIENTE" << endl;
+                    cout << "   4. ELIMINAR CLIENTER" << endl;
                     cout << "   0. VOLVER" << endl<<endl;
                     cin>>num;
                     switch(num){
                         case 1:
                             system("cls");
-                            clienteManager.cargar();
+                            cout << "funcion de cargar cliente" << endl;
+                            system("pause");
                             break;
                         case 2:
                             system("cls");
-                            clienteManager.mostrar();
+                            cout << "funcion de consultar cliente" << endl;
                             system("pause");
                             break;
                         case 3:
                             system("cls");
-                            clienteManager.buscar();
+                            cout << "funcion de modificar cliente" << endl;
+                            system("pause");
                             break;
                         case 4:
                             system("cls");
-                            clienteManager.modificar();
-                            break;
-                        case 5:
-                            system("cls");
-                            clienteManager.eliminar();
-                            break;
-                        case 6:
-                            system("cls");
-                            clienteManager.restaurar();
+                            cout << "funcion de eliminar cliente" << endl;
+                           system("pause");
                             break;
                         case 0:
                            system("cls");
