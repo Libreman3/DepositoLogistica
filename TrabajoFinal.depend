@@ -102,138 +102,173 @@
 	"proveedor.h"
 	"proveedorArchivo.h"
 
-1746459882 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\main.cpp
+1747601908 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\main.cpp
 	<iostream>
 	"proveedor.h"
 	"Menu.h"
 
-1746459882 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedor.h
+1747601908 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedor.h
 	<string>
 
-1746459882 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\menu.h
+1747601908 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\menu.h
 
-1746547816 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\menu.cpp
+1747962790 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\menu.cpp
 	<iostream>
 	"menu.h"
 	"ProveedorManager.h"
+	"clienteManager.h"
+	"menuProducto.h"
 
-1746547815 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedormanager.h
+1747601908 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedormanager.h
 
-1746459882 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedor.cpp
+1747601908 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedor.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"proveedor.h"
 
-1746547815 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedorarchivo.cpp
+1747601908 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedorarchivo.cpp
 	<iostream>
 	"proveedorArchivo.h"
 
-1746547815 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedorarchivo.h
+1747601908 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedorarchivo.h
 	<string>
 	"proveedor.h"
 
-1746566972 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedormanager.cpp
+1747979600 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\proveedormanager.cpp
 	<iostream>
 	<string>
-	"ProveedorManager.h"
+	"proveedorManager.h"
 	"proveedor.h"
 	"proveedorArchivo.h"
 
-1747933035 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\main.cpp
+1747410352 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\main.cpp
 	<iostream>
 	"proveedor.h"
 	"Menu.h"
-	"MenuProducto.h"
-	<cstdio>
 
-1747763735 c:\users\matias pc\desktop\nueva carpeta\depositologistica\proveedor.h
+1747410352 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedor.h
 	<string>
 
-1747604259 c:\users\matias pc\desktop\nueva carpeta\depositologistica\menu.h
+1747410352 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\menu.h
 
-1747604259 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\menu.cpp
+1747410352 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\menu.cpp
 	<iostream>
 	"menu.h"
 	"ProveedorManager.h"
 
-1747604259 c:\users\matias pc\desktop\nueva carpeta\depositologistica\proveedormanager.h
+1747410352 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedormanager.h
 
-1747604259 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\proveedor.cpp
+1747410352 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedor.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"proveedor.h"
 
-1747604259 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\proveedorarchivo.cpp
+1747410352 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedorarchivo.cpp
 	<iostream>
 	"proveedorArchivo.h"
 
-1747604259 c:\users\matias pc\desktop\nueva carpeta\depositologistica\proveedorarchivo.h
+1747410352 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedorarchivo.h
 	<string>
 	"proveedor.h"
 
-1747933920 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\proveedormanager.cpp
+1747410352 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedormanager.cpp
 	<iostream>
 	<string>
 	"ProveedorManager.h"
 	"proveedor.h"
 	"proveedorArchivo.h"
 
-1747606087 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\src\producto.cpp
+1747611359 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\cliente.cpp
 	<iostream>
-	"Producto.h"
+	<cstring>
+	<string>
+	"cliente.h"
 
-1747607354 c:\users\matias pc\desktop\nueva carpeta\depositologistica\include\producto.h
+1747611325 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\cliente.h
 	<string>
 
-1747607353 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\src\productoarchivo.cpp
+1747611924 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\clientearchivo.cpp
 	<iostream>
-	"ProductoArchivo.h"
-	"Producto.h"
+	"clienteArchivo.h"
 
-1747607354 c:\users\matias pc\desktop\nueva carpeta\depositologistica\include\productoarchivo.h
+1747611924 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\clientearchivo.h
+	<string>
+	"cliente.h"
+
+1747612957 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\clientemanager.cpp
+	<iostream>
+	<string>
+	"clienteManager.h"
+	"cliente.h"
+	"clienteArchivo.h"
+
+1747610304 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\clientemanager.h
+
+1747601908 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\cliente.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"cliente.h"
+
+1747601908 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\cliente.h
+	<string>
+
+1747601908 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\clientearchivo.cpp
+	<iostream>
+	"clienteArchivo.h"
+
+1747979653 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\clientearchivo.h
+	<string>
+	"cliente.h"
+
+1747601908 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\clientemanager.cpp
+	<iostream>
+	<string>
+	"clienteManager.h"
+	"cliente.h"
+	"clienteArchivo.h"
+
+1747601908 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\clientemanager.h
+
+1747960400 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\menuproducto.h
+
+1747981098 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\menuproducto.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"producto.h"
+	"productoArchivo.h"
+	"productoManager.h"
+	"menuProducto.h"
+
+1747965253 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\producto.h
+	<string>
+
+1747979653 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\productoarchivo.h
+	<iostream>
 	<string>
 	"producto.h"
 
-1747833101 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\producto.cpp
+1747963846 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\productomanager.h
+
+1747965213 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\producto.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"producto.h"
 
-1747832285 c:\users\matias pc\desktop\nueva carpeta\depositologistica\producto.h
-	<string>
-	"proveedor.h"
-
-1747832793 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\productoarchivo.cpp
+1747981600 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\produtoarchivo.cpp
 	<iostream>
 	"ProductoArchivo.h"
 	"Producto.h"
 
-1747607819 c:\users\matias pc\desktop\nueva carpeta\depositologistica\productoarchivo.h
+1747981648 source:c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\productomanager.cpp
 	<iostream>
 	<string>
 	"producto.h"
-
-1747835250 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\productomanager.cpp
-	<iostream>
-	<string>
-	"Producto.h"
-	"ProductoArchivo.h"
-	"ProductoManager.h"
+	"productoArchivo.h"
+	"productoManager.h"
 	<cstring>
-
-1747776066 c:\users\matias pc\desktop\nueva carpeta\depositologistica\productomanager.h
-
-1747776697 source:c:\users\matias pc\desktop\nueva carpeta\depositologistica\menuproducto.cpp
-	<iostream>
-	<cstring>
-	<string>
-	"producto.h"
-	"ProductoArchivo.h"
-	"ProductoManager.h"
-	"MenuProducto.h"
-
-1747766368 c:\users\matias pc\desktop\nueva carpeta\depositologistica\menuproducto.h
 

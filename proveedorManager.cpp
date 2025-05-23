@@ -1,15 +1,13 @@
 #include <iostream>
 #include <string>
-#include "ProveedorManager.h"
+#include "proveedorManager.h"
 #include "proveedor.h"
 #include "proveedorArchivo.h"
 
 using namespace std;
 
-void ProveedorManager::cargar(){
-    //ACA SE CARGA CADA PERFIL DE PROVEEDOR
-    int numeroProveedor;
-    long long cuit;
+void ProveedorManager::cargar(){    //ACA SE CARGA CADA PERFIL DE PROVEEDOR
+    int numeroProveedor, cuit;
     string razonSocial, direccion, mail;
     bool estado;
 
@@ -25,25 +23,13 @@ void ProveedorManager::cargar(){
     if(cuit==0){
         return;
     }
-
-     while (true) {
-            cout << "Ingrese numero de CUIT (11 digitos, sin guiones): ";
-            cin >> cuit;
-
-            if (cuit == 0) {
-                return; // Si el usuario presiona '0', cancela
-            }
-
-            // Validar que el CUIT tenga exactamente 11 dígitos (es decir, esté entre 10000000000 y 99999999999)
-            if (cuit >= 10000000000 && cuit <= 99999999999) {
-                break; // Si es válido, salimos del ciclo
-            }
-
-            cout << "CUIT invalido. Debe tener exactamente 11 digitos numericos." << endl;
+    while(cuit<1000000 || cuit>100000000){
+        cout<< "El cuit ingresado es incorrecto, por favor intente nuevamente: ";
+        cin>>cuit;
+        if(cuit==0){
+            return;
         }
-
-    cin.ignore();  // Limpiar el buffer antes de usar getline
-
+    }
     cout<< "Ingrese Razon Social:";
     cin.ignore();
     getline(cin,razonSocial);
@@ -277,7 +263,7 @@ void ProveedorManager::restaurar(){
 
     cout<<"------ RESTAURAR PROVEEDOR ------"<<endl;
     cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-    cout << "Ingrese el cuit del proveedor eliminado que desea restarurar :";
+    cout << "Ingrese el cuit del proveedor eliminado que desea restaurar :";
     cin >> cuitRestaurar;
     if(cuitRestaurar==0){
         return;

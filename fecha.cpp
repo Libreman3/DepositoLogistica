@@ -30,7 +30,3 @@ void Fecha::Mostrar() const {
     std::cout << mes << '/';
     std::cout << anio << '\n';
 }
-
-
-
-

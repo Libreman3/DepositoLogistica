@@ -74,5 +74,3 @@ void Proveedor::tarjetaProveedor(){
     cout<< "Mail: "<< getMail() <<endl;
     cout<< endl;
 }
-
-
