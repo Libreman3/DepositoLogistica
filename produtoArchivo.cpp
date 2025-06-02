@@ -83,7 +83,7 @@ int ProductoArchivo::buscarId(int idProducto) {
     pFile = fopen(_nombreArchivo.c_str(), "rb");
 
     if (pFile == nullptr) {
-        return 0;  // Retornar -1 si el archivo no se pudo abrir
+        return -1;  // Retornar -1 si el archivo no se pudo abrir
     }
 
     while (fread(&reg, sizeof(Producto), 1, pFile) == 1) {

@@ -3,6 +3,7 @@
 #include "ProveedorManager.h"
 #include "clienteManager.h"
 #include "menuProducto.h"
+#include "menuIngresos.h"
 
 using namespace std;
 
@@ -10,6 +11,7 @@ void Menu::mostrar(){
     ProveedorManager proveedorManager;
     MenuProducto menuProducto;
     ClienteManager clienteManager;
+    MenuIngresos menuIngresos;
 
     int num;
 
@@ -150,8 +152,7 @@ void Menu::mostrar(){
                     switch(num){
                         case 1:
                             system("cls");
-                            cout << "funcion de cargar ingreso" << endl;
-                            system("pause");
+                            menuIngresos.mostrar();
                             break;
                         case 2:
                             system("cls");

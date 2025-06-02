@@ -100,7 +100,7 @@ int ProveedorArchivo::buscarId(int idProveedor){
     pFile=fopen(_nombreArchivo.c_str(),"rb");
 
     if(pFile == nullptr){
-        return 0;
+        return -1;
     }
 
     while(fread(&reg, sizeof(Proveedor),1,pFile)==1){

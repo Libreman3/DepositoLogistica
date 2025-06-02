@@ -278,3 +278,157 @@
 1747981889 c:\users\dios no esta muerto\documents\programacion\trabajofinal-main\fecha.h
 	<iostream>
 
+1747776558 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\cliente.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"cliente.h"
+
+1747776558 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\cliente.h
+	<string>
+
+1747776558 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\clientearchivo.cpp
+	<iostream>
+	"clienteArchivo.h"
+
+1748015021 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\clientearchivo.h
+	<string>
+	"cliente.h"
+
+1747776558 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\clientemanager.cpp
+	<iostream>
+	<string>
+	"clienteManager.h"
+	"cliente.h"
+	"clienteArchivo.h"
+
+1747776558 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\clientemanager.h
+
+1748015021 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\fecha.cpp
+	"Fecha.h"
+
+1748015021 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\fecha.h
+	<iostream>
+
+1747779827 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\main.cpp
+	<iostream>
+	"proveedor.h"
+	"Menu.h"
+
+1747776558 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\proveedor.h
+	<string>
+
+1747776558 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menu.h
+
+1748290583 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menu.cpp
+	<iostream>
+	"menu.h"
+	"ProveedorManager.h"
+	"clienteManager.h"
+	"menuProducto.h"
+	"menuIngresos.h"
+
+1747776558 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\proveedormanager.h
+
+1748015021 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menuproducto.h
+
+1747780779 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\proveedor.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"proveedor.h"
+
+1748874276 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\proveedorarchivo.cpp
+	<iostream>
+	"proveedorArchivo.h"
+
+1747776558 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\proveedorarchivo.h
+	<string>
+	"proveedor.h"
+
+1748015021 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\proveedormanager.cpp
+	<iostream>
+	<string>
+	"proveedorManager.h"
+	"proveedor.h"
+	"proveedorArchivo.h"
+
+1748015021 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menuproducto.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"producto.h"
+	"productoArchivo.h"
+	"productoManager.h"
+	"menuProducto.h"
+
+1748015021 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\producto.h
+	<string>
+
+1748015021 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\productoarchivo.h
+	<iostream>
+	<string>
+	"producto.h"
+
+1748015021 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\productomanager.h
+
+1748015021 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\producto.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"producto.h"
+
+1748015021 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\productomanager.cpp
+	<iostream>
+	<string>
+	"producto.h"
+	"productoArchivo.h"
+	"productoManager.h"
+	<cstring>
+
+1748875798 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\produtoarchivo.cpp
+	<iostream>
+	"ProductoArchivo.h"
+	"Producto.h"
+
+1748876133 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosmanager.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"ingresosManager.h"
+	"ingresos.h"
+	"ingresosArchivo.h"
+	"fecha.h"
+	"proveedorArchivo.h"
+	"productoArchivo.h"
+
+1748740241 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosarchivo.cpp
+	"ingresosArchivo.h"
+	<cstdio>
+
+1748740241 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosarchivo.h
+	<string>
+	"ingresos.h"
+
+1748739201 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresos.h
+	"fecha.h"
+
+1748743266 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresos.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"ingresos.h"
+
+1748289717 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menuingresos.cpp
+	<iostream>
+	<cstdlib>
+	<limits>
+	"menuIngresos.h"
+	"ingresosManager.h"
+
+1748017457 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menuingresos.h
+
+1748289533 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosmanager.h
+	"Ingresos.h"
+	"IngresosArchivo.h"
+

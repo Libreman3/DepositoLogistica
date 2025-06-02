@@ -55,7 +55,15 @@
 		<Unit filename="fecha.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="ingresos.cpp" />
+		<Unit filename="ingresos.h" />
+		<Unit filename="ingresosArchivo.cpp" />
+		<Unit filename="ingresosArchivo.h" />
+		<Unit filename="ingresosManager.cpp" />
+		<Unit filename="ingresosManager.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menuIngresos.cpp" />
+		<Unit filename="menuIngresos.h" />
 		<Unit filename="menuProducto.cpp" />
 		<Unit filename="menuProducto.h">
 			<Option target="&lt;{~None~}&gt;" />
