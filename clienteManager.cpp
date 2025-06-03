@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include "clienteManager.h"
 #include "cliente.h"
 #include "clienteArchivo.h"
@@ -241,7 +240,6 @@ void ClienteManager::modificar(){
     }else{
         cout <<endl<< "NO EXISTE EL ID INGRESADO"<<endl<<endl;
     }
-    system("pause");
 }
 
 void ClienteManager::eliminar(){

@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void ProveedorManager::cargar(){    //ACA SE CARGA CADA PERFIL DE PROVEEDOR
+void ProveedorManager::cargar(){
     int numeroProveedor, cuit;
     string razonSocial, direccion, mail;
     bool estado;
@@ -16,13 +16,16 @@ void ProveedorManager::cargar(){    //ACA SE CARGA CADA PERFIL DE PROVEEDOR
 
     cout<<"------- CARGAR PROVEEDOR -------"<<endl;
     cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-    cout<< "Ingrese numero de Proveedor:";    //ESTO EN REALIDAD NO LO DEBERIA PREGUNTAR
-    cin>>numeroProveedor;                     //SEDEBERIA CARGAR AUTOMATICAMENTE
+
+    numeroProveedor = pArchivo.getCantidadProveedores() + 1;
+    cout << "ID asignado automáticamente: " << numeroProveedor << endl;
+
     cout<< "Ingrese numero de CUIT: ";
     cin>>cuit;
     if(cuit==0){
         return;
     }
+
     while(cuit<1000000 || cuit>100000000){
         cout<< "El cuit ingresado es incorrecto, por favor intente nuevamente: ";
         cin>>cuit;
@@ -30,27 +33,40 @@ void ProveedorManager::cargar(){    //ACA SE CARGA CADA PERFIL DE PROVEEDOR
             return;
         }
     }
-    cout<< "Ingrese Razon Social:";
-    cin.ignore();
-    getline(cin,razonSocial);
-    if(razonSocial=="0"){
-        return;
-    }
-    cout<< "Ingrese direccion:";
-    getline(cin,direccion);
-    if(direccion=="0"){
-        return;
-    }
-    cout<< "Ingrese mail:";
-    getline(cin,mail);
-    if(mail=="0"){
-        return;
-    }
+
+    do{
+        cout<< "Ingrese Razon Social:";
+        cin.ignore();
+        getline(cin,razonSocial);
+        if(razonSocial=="0")return;
+        if(razonSocial.empty()){
+            cout<< "Debe ingresar una razon social válida: "<<endl;
+        }
+    }while(razonSocial.empty());
+
+    do{
+        cout<< "Ingrese direccion:";
+        getline(cin,direccion);
+        if(direccion=="0")return;
+        if(direccion.empty()){
+            cout<< "Debe ingresar una dirección válida: "<<endl;
+        }
+    }while(direccion.empty());
+
+    do{
+        cout<< "Ingrese mail:";
+        getline(cin,mail);
+        if(mail=="0")return;
+        if(mail.empty()){
+            cout<< "Debe ingresar un mail válido: "<<endl;
+        }
+    }while(mail.empty());
+
     estado = true;
 
     proveedor = Proveedor(numeroProveedor,cuit, razonSocial, direccion, mail, estado);
 
-    if(pArchivo.guardar(proveedor)){    // AL FINALIZAR LA CARGA TE MUESTRA SI ESTA TODO OK O SI HUBO ALGUN ERROR
+    if(pArchivo.guardar(proveedor)){
         cout<<endl<<"Se guardo correctamente!"<<endl<<endl;
         system("pause");
     }else{
@@ -59,13 +75,13 @@ void ProveedorManager::cargar(){    //ACA SE CARGA CADA PERFIL DE PROVEEDOR
     }
 }
 
-void ProveedorManager::mostrar(){  //EN ESTE PROCESO BUSCA PRIMERO LA CANTIDAD DE PROVEEDORES CARGADOS,
-    ProveedorArchivo pArchivo;     //PARA QUE FUNCIONE EL BUCLE DE MOSTRARLOS A TODOS
+void ProveedorManager::mostrar(){
+    ProveedorArchivo pArchivo;
     Proveedor registro;
 
-    int cantidadRegistros = pArchivo.getCantidadProveedores();  //CALCULA LA CANTIDAD DE PROVEEDORES CARGADOS
+    int cantidadRegistros = pArchivo.getCantidadProveedores();
 
-    for(int i=0; i<cantidadRegistros; i++){     //MUESTRA LOS PROVEEDORES CARGADOS
+    for(int i=0; i<cantidadRegistros; i++){
         registro = pArchivo.leer(i);
 
         if(registro.getEstado()== true){
@@ -109,6 +125,18 @@ void ProveedorManager::buscar(){
 void ProveedorManager::modificar(){
     ProveedorArchivo pArchivo;
     Proveedor proveedor;
+
+    /*int cantidadRegistros = pArchivo.getCantidadProveedores();
+
+    for(int i=0; i<cantidadRegistros; i++){
+        registro = pArchivo.leer(i);
+
+        if(registro.getEstado()==true){
+
+
+
+        }
+    }*/
 
     int idProveedor;
 
@@ -160,7 +188,7 @@ void ProveedorManager::modificar(){
                 cout<<endl<< "PROVEEDOR MODIFICADO"<<endl<<endl;
             } else{
                 cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
-            }
+            }system("pause");
             return;
         case 2:
             system("cls");
@@ -177,6 +205,7 @@ void ProveedorManager::modificar(){
             }else{
                 cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
             }
+            system("pause");
             break;
         case 3:
             system("cls");
@@ -193,12 +222,13 @@ void ProveedorManager::modificar(){
             }else{
                 cout <<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
             }
+            system("pause");
             break;
         case 4:
             system("cls");
             cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
             cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-            cout << "Ingrese el nuevo mail: "<<endl;
+            cout << "Ingrese el nuevo mail: ";
             cin >> mail;
             if(mail=="0"){
                 return;
@@ -209,23 +239,23 @@ void ProveedorManager::modificar(){
             }else{
                 cout <<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
             }
+            system("pause");
             break;
         case 0:
             break;
         default:
             cout <<endl<< "OPCION INCORRECTA" <<endl<<endl;
+            system("pause");
             break;
         }
     }else{
         cout <<endl<< "NO EXISTE EL ID INGRESADO"<<endl<<endl;
+        system("pause");
     }
-    system("pause");
 }
 
 void ProveedorManager::eliminar(){
     ProveedorArchivo pArchivo;
-
-    Proveedor proveedor; //VER SI ES OBLIGATORIO ESTE USO
 
     int cuitEliminar;
 
@@ -256,8 +286,6 @@ void ProveedorManager::eliminar(){
 
 void ProveedorManager::restaurar(){
     ProveedorArchivo pArchivo;
-
-    Proveedor proveedor;
 
     int cuitRestaurar;
 

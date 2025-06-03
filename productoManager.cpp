@@ -1,9 +1,8 @@
 #include <iostream>
-#include <string>
+#include "productoManager.h"
 #include "producto.h"
 #include "productoArchivo.h"
-#include "productoManager.h"
-#include <cstring>
+
 using namespace std;
 
 void ProductoManager::cargar() {

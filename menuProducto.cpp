@@ -1,16 +1,12 @@
 #include <iostream>
-#include <cstring>
-#include <string>
-#include "producto.h"
-#include "productoArchivo.h"
-#include "productoManager.h"
 #include "menuProducto.h"
+#include "productoManager.h"
 
 using namespace std;
 
 void MenuProducto::mostrar(){
-    int opcion;
     ProductoManager productoManager;
+    int opcion;
 
     do {
         system("cls");
@@ -57,7 +53,5 @@ void MenuProducto::mostrar(){
             system("pause");
             break;
         }
-
     } while (opcion != 0);
-
 }
