@@ -12,11 +12,11 @@ void Proveedor::setNumeroProveedor(int numeroProveedor){
     _numeroProveedor=numeroProveedor;
 }
 
-int Proveedor::getCuit(){
+std::string Proveedor::getCuit(){
     return _cuit;
 }
-void Proveedor::setCuit(int cuit){
-    _cuit=cuit;
+void Proveedor::setCuit(std::string cuit){
+    strcpy(_cuit,cuit.c_str());
 }
 
 std::string Proveedor::getRazonSocial(){
@@ -49,13 +49,13 @@ void Proveedor::setEstado(bool estado){
 
 Proveedor::Proveedor(){
     _numeroProveedor = 0;
-    _cuit=0;
+    strcpy(_cuit, "");
     strcpy(_razonSocial, "");
     strcpy(_direccion, "");
     strcpy(_mail, "");
     _estado= true;
 }
-Proveedor::Proveedor(int numeroProveedor,int cuit, std::string razonSocial,std::string direccion,std::string mail,bool estado){
+Proveedor::Proveedor(int numeroProveedor,std::string cuit, std::string razonSocial,std::string direccion,std::string mail,bool estado){
     setNumeroProveedor(numeroProveedor);
     setCuit(cuit);
     setRazonSocial(razonSocial);

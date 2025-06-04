@@ -4,7 +4,7 @@
 class Proveedor{
 private:
     int _numeroProveedor;
-    int _cuit;
+    char _cuit[12];
     char _razonSocial[50];
     char _direccion[50];
     char _mail[50];
@@ -13,8 +13,8 @@ public:
     int getNumeroProveedor();
     void setNumeroProveedor(int numeroProveedor);
 
-    int getCuit();
-    void setCuit(int cuit);
+    std::string getCuit();
+    void setCuit(std::string cuit);
 
     std::string getRazonSocial();
     void setRazonSocial(std::string razonSocial);
@@ -29,7 +29,7 @@ public:
     void setEstado(bool estado);
 
     Proveedor();
-    Proveedor(int numeroProveedor,int cuit, std::string razonSocial,std::string direccion,std::string mail,bool estado);
+    Proveedor(int numeroProveedor,std::string cuit, std::string razonSocial,std::string direccion,std::string mail,bool estado);
 
     void tarjetaProveedor();
 

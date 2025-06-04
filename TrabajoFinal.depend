@@ -147,7 +147,7 @@
 	"proveedor.h"
 	"Menu.h"
 
-1748864018 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedor.h
+1748996814 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedor.h
 	<string>
 
 1748864018 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\menu.h
@@ -162,21 +162,21 @@
 
 1748864018 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedormanager.h
 
-1748864018 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedor.cpp
+1748992922 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedor.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"proveedor.h"
 
-1748864018 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedorarchivo.cpp
+1748997062 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedorarchivo.cpp
 	<iostream>
 	"proveedorArchivo.h"
 
-1748864018 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedorarchivo.h
+1748996307 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedorarchivo.h
 	<string>
 	"proveedor.h"
 
-1748918653 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedormanager.cpp
+1748997437 source:c:\users\dios no esta muerto\documents\programacion\depositologistica-main\proveedormanager.cpp
 	<iostream>
 	<string>
 	"proveedorManager.h"

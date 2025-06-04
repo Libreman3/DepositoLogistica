@@ -68,29 +68,6 @@ Proveedor ProveedorArchivo::leer(int pos){
     return reg;
 }
 
-int ProveedorArchivo::buscarCuit(int cuitProveedor){
-    FILE *pFile;
-    Proveedor reg;
-
-    int posicion=0;
-
-    pFile = fopen(_nombreArchivo.c_str(), "rb");
-
-    if(pFile == nullptr){
-        return 0;
-    }
-
-    while(fread(&reg, sizeof(Proveedor),1,pFile)==1){
-        if(reg.getCuit()==cuitProveedor){
-            fclose(pFile);
-            return posicion;
-        }
-        posicion++;
-    }
-    fclose(pFile);
-    return -1;
-}
-
 int ProveedorArchivo::buscarId(int idProveedor){
     FILE *pFile;
     Proveedor reg;

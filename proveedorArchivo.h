@@ -16,6 +16,6 @@ public:
     bool modificar(Proveedor registro, int posicion);
 
     int buscarId(int idProveedor);
-    int buscarCuit(int cuitProveedor);
+    //int buscarCuit(int cuitProveedor);
     //string buscar (string razonSocial);
 };
