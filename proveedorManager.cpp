@@ -39,7 +39,6 @@ void ProveedorManager::cargar(){
             cout << endl<< "EL CUIT DEBE TENER EXACTAMENTE 11 CARACTERES!" << endl <<endl;
             cout<< "Ingrese numero de CUIT:";
             getline(cin,cuit);
-
             continue;
         }
         bool cuitRepetido=false;
@@ -217,6 +216,12 @@ void ProveedorManager::modificar(){
                         getline(cin,cuit);
                         continue;
                     }
+                    if(cuit.length()!=11){
+                        cout << endl<< "EL CUIT DEBE TENER EXACTAMENTE 11 CARACTERES!" << endl <<endl;
+                        cout<< "Ingrese numero de CUIT:";
+                        getline(cin,cuit);
+                        continue;
+                    }
                     bool cuitRepetido=false;
                     for(int i=0; i<cantidadRegistros;i++){
 
@@ -232,10 +237,6 @@ void ProveedorManager::modificar(){
                     }
                     if(!cuitRepetido){
                         break;
-                    }
-                    if(cuit.length()!=11){
-                        cout << endl<< "EL CUIT DEBE TENER EXACTAMENTE 11 CARACTERES!" << endl <<endl;
-                        continue;
                     }
                 }while(true);
 
