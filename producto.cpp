@@ -61,9 +61,9 @@ Producto::Producto(int idProducto,std::string nombre, std::string marca, bool es
 
 void Producto::tarjetaProducto() {
 
-    cout<< "===================" <<endl;
     cout << "ID Producto: " << getIdProducto() << endl;
     cout << "Nombre: " << getNombre() << endl;
-    cout << "Marca: " << getMarca() << endl;
+    cout << "Marca: " << getMarca() << endl<<endl;
+    cout<< "===================" <<endl;
     cout << endl;
 }

@@ -28,6 +28,7 @@ void MenuProducto::mostrar(){
         case 2:
             system("cls");
             productoManager.mostrar();
+            system("pause");
             break;
         case 3:
             system("cls");

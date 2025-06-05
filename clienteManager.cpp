@@ -5,57 +5,113 @@
 
 using namespace std;
 
-void ClienteManager::cargar(){    //ACA SE CARGA CADA PERFIL DE CLIENTE
-    int numeroCliente, dni;
-    string nombre, apellido, direccion, mail;
+void ClienteManager::cargar(){
+    string dni, nombre, apellido, direccion, mail;
     bool estado;
 
     Cliente cliente;
     ClienteArchivo cArchivo;
+    Cliente registro;
 
     cout<<"------- CARGAR CLIENTE -------"<<endl;
     cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-    cout<< "Ingrese numero de Cliente:";    //ESTO EN REALIDAD NO LO DEBERIA PREGUNTAR
-    cin>>numeroCliente;                     //SEDEBERIA CARGAR AUTOMATICAMENTE
-    cout<< "Ingrese numero de DNI: ";
-    cin>>dni;
-    if(dni==0){
-        return;
-    }
-    while(dni<1000000 || dni>100000000){
-        cout<< "El dni ingresado es incorrecto, por favor intente nuevamente: ";
-        cin>>dni;
-        if(dni==0){
+
+    int numeroCliente = cArchivo.getCantidadClientes()+1;
+    cout<< "ID asignado automáticamente: "<< numeroCliente<<endl;
+
+    cout<< "Ingrese número de DNI: ";
+    cin.ignore();
+    getline(cin,dni);
+
+    do{
+        if(dni=="0"){
             return;
         }
-    }
-    cout<< "Ingrese el nombre: ";
-    cin.ignore();
-    getline(cin,nombre);
-    if(nombre=="0"){
-        return;
-    }
-    cout<< "Ingrese apellido: ";
-    getline(cin,apellido);
-    if(apellido=="0"){
-        return;
-    }
-    cout<< "Ingrese direccion:";
-    getline(cin,direccion);
-    if(direccion=="0"){
-        return;
-    }
-    cout<< "Ingrese mail:";
-    getline(cin,mail);
-    if(mail=="0"){
-        return;
-    }
+        if(dni.empty()){
+            cout << endl << "POR FAVOR DEBE INGRESAR UN NÚMERO DE DNI VÁLIDO!" <<endl <<endl;
+            cout<< "Ingrese número de DNI: ";
+            getline(cin,dni);
+            continue;
+        }
+        if(dni.length()<7||dni.length()>8){
+            cout<< endl << "EL DNI DEBE TENER ENTRE 7 Y 8 CARACTERES!"<<endl<<endl;
+            cout<< "Ingrese número de DNI: ";
+            getline(cin,dni);
+            continue;
+        }
+        bool dniRepetido=false;
+        for(int i =0; i<numeroCliente;i++){
+            registro = cArchivo.leer(i);
+
+            if(registro.getDni()==dni){
+                cout<<endl<< "EL DNI INGRESADO YA SE ENCUENTRA REGISTRADO!"<<endl<<endl;
+                cout<< "Ingrese numero de DNI: ";
+                getline(cin,dni);
+                dniRepetido=true;
+                break;
+            }
+        }
+        if(!dniRepetido){
+            break;
+        }
+    }while(true);
+
+    do{
+        cout<< "Ingrese el nombre: ";
+        getline(cin,nombre);
+        if(nombre=="0")return;
+        if(nombre.empty()){
+            cout<<endl<<"POR FAVOR DEBE INGRESAR UN NOMBRE VÁLIDO!"<<endl<<endl;
+        }
+    }while(nombre.empty());
+
+    do{
+        cout<< "Ingrese el apellido: ";
+        getline(cin,apellido);
+        if(apellido=="0")return;
+        if(apellido.empty()){
+            cout<<endl<<"POR FAVOR DEBE INGRESAR UN APELLIDO VÁLIDO!"<<endl<<endl;
+        }
+    }while(apellido.empty());
+
+    do{
+        cout<< "Ingrese la dirección: ";
+        getline(cin,direccion);
+        if(direccion=="0")return;
+        if(direccion.empty()){
+            cout<<endl<<"POR FAVOR DEBE INGRESAR UNA DIRECCION  VÁLIDA!"<<endl<<endl;
+        }
+    }while(direccion.empty());
+
+    do{
+        cout<< "Ingrese mail:";
+        getline(cin,mail);
+        if(mail=="0")return;
+        if(mail.empty()){
+            cout<<endl<< "POR FAVOR DEBE INGRESAR UN MAIL VÁLIDO!"<<endl<<endl;
+            continue;
+        }
+        bool mailRepetido=false;
+        for(int i=0; i<numeroCliente;i++){
+            registro = cArchivo.leer(i);
+
+            if(registro.getMail()== mail){
+                cout<<endl<< "EL MAIL INGRESADO YA SE ENCUENTRA REGISTRADO!"<<endl<<endl;
+                mailRepetido=true;
+                break;
+            }
+        }
+        if(!mailRepetido){
+            break;
+        }
+    }while(true);
+
     estado = true;
 
     cliente = Cliente(numeroCliente,dni, nombre, apellido, direccion, mail, estado);
 
-    if(cArchivo.guardar(cliente)){    // AL FINALIZAR LA CARGA TE MUESTRA SI ESTA TODO OK O SI HUBO ALGUN ERROR
-        cout<<endl<<"Se guardo correctamente!"<<endl<<endl;
+    if(cArchivo.guardar(cliente)){
+        cout<<endl<<"Se guardó correctamente!"<<endl<<endl;
         system("pause");
     }else{
         cout<<endl<< "Error inesperado!"<<endl<<endl;
@@ -63,13 +119,15 @@ void ClienteManager::cargar(){    //ACA SE CARGA CADA PERFIL DE CLIENTE
     }
 }
 
-void ClienteManager::mostrar(){  //EN ESTE PROCESO BUSCA PRIMERO LA CANTIDAD DE ClienteES CARGADOS,
-    ClienteArchivo cArchivo;     //PARA QUE FUNCIONE EL BUCLE DE MOSTRARLOS A TODOS
+void ClienteManager::mostrar(){
+    ClienteArchivo cArchivo;
     Cliente registro;
 
-    int cantidadRegistros = cArchivo.getCantidadClientes();  //CALCULA LA CANTIDAD DE ClienteES CARGADOS
+    int cantidadRegistros = cArchivo.getCantidadClientes();
 
-    for(int i=0; i<cantidadRegistros; i++){     //MUESTRA LOS ClienteES CARGADOS
+    cout<<"------- LISTA DE CLIENTES ACTIVOS -------"<<endl<<endl;
+
+    for(int i=0; i<cantidadRegistros; i++){
         registro = cArchivo.leer(i);
 
         if(registro.getEstado()== true){
@@ -82,14 +140,15 @@ void ClienteManager::buscar(){
     ClienteArchivo cArchivo;
     Cliente registro;
 
-    int dniBuscado;
+    string dniBuscado;
     bool encontrado = false;
 
     cout<<"------ BUSCAR CLIENTE ------"<<endl;
     cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-    cout<< "Ingrese el dni del cliente que desea buscar: ";
+    cout<< "Ingrese el DNI del cliente que desea buscar: ";
     cin>>dniBuscado;
-    if(dniBuscado==0){
+    cout<<endl;
+    if(dniBuscado=="0"){
         return;
     }
 
@@ -99,13 +158,18 @@ void ClienteManager::buscar(){
         registro = cArchivo.leer(i);
 
         if(registro.getDni()== dniBuscado){
-            registro.tarjetaCliente();
+            if(registro.getEstado()==true){
+                registro.tarjetaCliente();
+                encontrado=true;
+                break;
+            }
             encontrado=true;
+            cout << "EL CLIENTE QUE ESTA BUSCANDO SE ENCUENTRA DADO DE BAJA!"<<endl<<endl;
             break;
         }
     }
     if (encontrado == false){
-        cout <<endl<< "NO SE ENCONTRO CLIENTE CON EL NUMERO DE DNI INGRESADO!"<<endl<<endl;
+        cout << "NO SE ENCONTRÓ CLIENTE CON EL NÚMERO DE DNI INGRESADO!"<<endl<<endl;
     }
     system("pause");
 }
@@ -128,148 +192,210 @@ void ClienteManager::modificar(){
 
     if(posicion>=0){
         Cliente registro = cArchivo.leer(posicion);
-        int dato, dni;
-        string nombre, apellido, direccion, mail;
 
-        system("cls");
-        cout<<"------ MODIFICAR CLIENTE ------"<<endl<<endl;
-        cout<< "INGRESE QUE DATO DESEA MODIFICAR:"<<endl;
-        cout<< "1. Numero de DNI"<<endl;
-        cout<< "2. Nombre"<<endl;
-        cout<< "3. Apellido"<<endl;
-        cout<< "4. Direccion"<<endl;
-        cout<< "5. Mail"<<endl;
-        cout<< "0. Cancelar"<<endl;
-        cout<< endl;
-        cin >> dato;
+        if(registro.getEstado()==true){
+            int dato;
+            string dni, nombre, apellido, direccion, mail;
+            int cantidadRegistros = cArchivo.getCantidadClientes();
 
-        switch(dato){
-        case 1:
             system("cls");
-            cout<<"------ MODIFICAR CLIENTE ------"<<endl;
-            cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-            cout << "Ingrese el nuevo numero de DNI: ";
-            cin >> dni;
-            if(dni==0){
+            cout<<"------ MODIFICAR CLIENTE ------"<<endl<<endl;
+            cout<< "INGRESE QUE DATO DESEA MODIFICAR:"<<endl;
+            cout<< "1. Número de DNI"<<endl;
+            cout<< "2. Nombre"<<endl;
+            cout<< "3. Apellido"<<endl;
+            cout<< "4. Dirección"<<endl;
+            cout<< "5. Mail"<<endl;
+            cout<< "0. Cancelar"<<endl;
+            cout<< endl;
+            cin >> dato;
+            cin.ignore();
+
+            switch(dato){
+            case 1:
+                system("cls");
+                cout<<"------ MODIFICAR DNI CLIENTE ------"<<endl;
+                cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+                cout << "Ingrese el nuevo número de DNI: ";
+                getline(cin,dni);
+
+                do{
+                    if(dni=="0"){
+                        return;
+                    }
+                    if(dni.empty()){
+                        cout << endl << "POR FAVOR DEBE INGRESAR UN NÚMERO DE DNI VÁLIDO!" <<endl <<endl;
+                        cout<< "Ingrese número de DNI: ";
+                        getline(cin,dni);
+                        continue;
+                    }
+                    if(dni.length()<7||dni.length()>8){
+                        cout<< endl << "EL DNI DEBE TENER ENTRE 7 Y 8 CARACTERES!"<<endl<<endl;
+                        cout<< "Ingrese número de DNI: ";
+                        getline(cin,dni);
+                        continue;
+                    }
+                    bool dniRepetido=false;
+                    for(int i; i<cantidadRegistros;i++){
+
+                        Cliente registroSecundario = cArchivo.leer(i);
+
+                        if(registroSecundario.getDni()==dni){
+                            cout<<endl<< "EL DNI INGRESADO YA SE ENCUENTRA REGISTRADO!"<<endl<<endl;
+                            cout<< "Ingrese número de DNI: ";
+                            getline(cin,dni);
+                            dniRepetido=true;
+                            break;
+                        }
+                    }
+                    if(!dniRepetido){
+                        break;
+                    }
+                }while(true);
+
+                registro.setDni(dni);
+                if(cArchivo.modificar(registro,posicion)){
+                    cout<<endl<< "CLIENTE MODIFICADO"<<endl<<endl;
+                } else{
+                    cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
+                }system("pause");
                 return;
+            case 2:
+                system("cls");
+                cout<<"------ MODIFICAR NOMBRE CLIENTE ------"<<endl;
+                cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+                do{
+                    cout<< "Ingrese el nuevo nombre: ";
+                    getline(cin,nombre);
+                    if(nombre=="0")return;
+                    if(nombre.empty()){
+                        cout<<endl<<"POR FAVOR DEBE INGRESAR UN NOMBRE VÁLIDO!"<<endl<<endl;
+                    }
+                }while(nombre.empty());
+                registro.setNombre(nombre);
+                if(cArchivo.modificar(registro,posicion)){
+                    cout <<endl<< "CLIENTE MODIFICADO"<<endl<<endl;
+                }else{
+                    cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
+                }system("pause");
+                break;
+            case 3:
+                system("cls");
+                cout<<"------ MODIFICAR APELLIDO CLIENTE ------"<<endl;
+                cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+                do{
+                    cout<< "Ingrese el nuevo apellido: ";
+                    getline(cin,apellido);
+                    if(apellido=="0")return;
+                    if(apellido.empty()){
+                        cout<<endl<<"POR FAVOR DEBE INGRESAR UN APELLIDO VÁLIDO!"<<endl<<endl;
+                    }
+                }while(apellido.empty());
+                registro.setApellido(apellido);
+                if(cArchivo.modificar(registro,posicion)){
+                    cout <<endl<< "CLIENTE MODIFICADO"<<endl<<endl;
+                }else{
+                    cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
+                }system("pause");
+                break;
+            case 4:
+                system("cls");
+                cout<<"------ MODIFICAR DIRECCIÓN CLIENTE ------"<<endl;
+                cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+                do{
+                    cout<< "Ingrese la nueva dirección: ";
+                    getline(cin,direccion);
+                    if(direccion=="0")return;
+                    if(direccion.empty()){
+                        cout<<endl<<"POR FAVOR DEBE INGRESAR UNA DIRECCIÓN VÁLIDA!"<<endl<<endl;
+                    }
+                }while(direccion.empty());
+                registro.setDireccion(direccion);
+                if(cArchivo.modificar(registro,posicion)){
+                    cout <<endl<< "CLIENTE MODIFICADO"<<endl<<endl;
+                }else{
+                    cout <<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
+                }system("pause");
+                break;
+            case 5:
+                system("cls");
+                cout<<"------ MODIFICAR MAIL CLIENTE ------"<<endl;
+                cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+                do{
+                    cout << "Ingrese el nuevo mail: ";
+                    getline(cin,mail);
+                    if(mail=="0")return;
+                    if(mail.empty()){
+                        cout<<endl<< "POR FAVOR DEBE INGRESAR UN MAIL VÁLIDO!"<<endl<<endl;
+                        continue;
+                    }
+                    bool mailRepetido=false;
+                    for(int i=0; i<cantidadRegistros;i++){
+                        Cliente registroSecundario = cArchivo.leer(i);
+
+                        if(registroSecundario.getMail()== mail){
+                            cout<<endl<< "EL MAIL INGRESADO YA SE ENCUENTRA REGISTRADO!"<<endl<<endl;
+                            mailRepetido=true;
+                            break;
+                        }
+                    }
+                    if(!mailRepetido){
+                        break;
+                    }
+                }while(true);
+                registro.setMail(mail);
+                if(cArchivo.modificar(registro,posicion)){
+                    cout <<endl<< "CLIENTE MODIFICADO"<< endl<<endl;
+                }else{
+                    cout <<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
+                }system("pause");
+                break;
+            case 0:
+                break;
+            default:
+                cout <<endl<< "OPCIÓN INCORRECTA" <<endl<<endl;
+                system("pause");
+                break;
             }
-            while(dni<1000000 || dni>100000000){
-                cout<< "El dni ingresado es incorrecto, por favor intente nuevamente: ";
-                cin>>dni;
-                if(dni==0){
-                    return;
-                }
-            }
-            registro.setDni(dni);
-            if(cArchivo.modificar(registro,posicion)){
-                cout<<endl<< "CLIENTE MODIFICADO"<<endl<<endl;
-            } else{
-                cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
-            }
-            return;
-        case 2:
-            system("cls");
-            cout<<"------ MODIFICAR CLIENTE ------"<<endl;
-            cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-            cout<< "Ingrese el nuevo nombre: ";
-            cin>> nombre;
-            if(nombre=="0"){
-                return;
-            }
-            registro.setNombre(nombre);
-            if(cArchivo.modificar(registro,posicion)){
-                cout <<endl<< "CLIENTE MODIFICADO"<<endl<<endl;
-            }else{
-                cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
-            }
-            break;
-        case 3:
-            system("cls");
-            cout<<"------ MODIFICAR CLIENTE ------"<<endl;
-            cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-            cout<< "Ingrese el nuevo apellido: ";
-            cin>> apellido;
-            if(apellido=="0"){
-                return;
-            }
-            registro.setApellido(apellido);
-            if(cArchivo.modificar(registro,posicion)){
-                cout <<endl<< "CLIENTE MODIFICADO"<<endl<<endl;
-            }else{
-                cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
-            }
-            break;
-        case 4:
-            system("cls");
-            cout<<"------ MODIFICAR CLIENTE ------"<<endl;
-            cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-            cout << "Ingrese la nueva direccion: ";
-            cin >> direccion;
-            if(direccion=="0"){
-                return;
-            }
-            registro.setDireccion(direccion);
-            if(cArchivo.modificar(registro,posicion)){
-                cout <<endl<< "CLIENTE MODIFICADO"<<endl<<endl;
-            }else{
-                cout <<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
-            }
-            break;
-        case 5:
-            system("cls");
-            cout<<"------ MODIFICAR CLIENTE ------"<<endl;
-            cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-            cout << "Ingrese el nuevo mail: "<<endl;
-            cin >> mail;
-            if(mail=="0"){
-                return;
-            }
-            registro.setMail(mail);
-            if(cArchivo.modificar(registro,posicion)){
-                cout <<endl<< "CLIENTE MODIFICADO"<< endl<<endl;
-            }else{
-                cout <<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
-            }
-            break;
-        case 0:
-            break;
-        default:
-            cout <<endl<< "OPCION INCORRECTA" <<endl<<endl;
-            break;
+        } else {
+            cout<< endl<< "El ID ingresado se encuentra eliminado, debe darlo de alta para realizar modificaciones" <<endl<<endl;
+            system("pause");
         }
     }else{
         cout <<endl<< "NO EXISTE EL ID INGRESADO"<<endl<<endl;
+        system("pause");
     }
 }
 
 void ClienteManager::eliminar(){
     ClienteArchivo cArchivo;
 
-    Cliente cliente; //VER SI ES OBLIGATORIO ESTE USO
-
-    int dniEliminar;
+    int idEliminar;
 
     cout<<"------ ELIMINAR CLIENTE ------"<<endl;
     cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-    cout <<"Ingrese el dni del cliente que desea eliminar: ";
-    cin >> dniEliminar;
-    if(dniEliminar==0){
+    cout <<"Ingrese el ID del cliente que desea eliminar: ";
+    cin >> idEliminar;
+    if(idEliminar==0){
         return;
     }
 
-    int posicion = cArchivo.buscarDni(dniEliminar);
+    int posicion = cArchivo.buscarId(idEliminar);
 
     if(posicion>=0){
         Cliente registro = cArchivo.leer(posicion);
-        registro.setEstado(false);
-        if(cArchivo.modificar(registro, posicion)){
-            cout <<endl<< "CLIENTE ELIMINADO"<<endl<<endl;
+        if(registro.getEstado()==true){
+            registro.setEstado(false);
+            if(cArchivo.modificar(registro, posicion)){
+                cout <<endl<< "CLIENTE ELIMINADO"<<endl<<endl;
+            }else{
+                cout <<endl<< "HUBO UN ERROR"<<endl<<endl;
+            }
         }else{
-            cout <<endl<< "HUBO UN ERROR"<<endl<<endl;
+            cout << endl << "NO SE PUDO ELIMINAR EL CLIENTE PORQUE YA SE ENCUENTRA DADO DE BAJA"<< endl << endl;
         }
-
     }else{
-        cout<<endl<< "NO EXISTE EL DNI INGRESADO"<<endl<<endl;
+        cout<<endl<< "NO EXISTE EL ID INGRESADO"<<endl<<endl;
     }
     system("pause");
 }
@@ -277,31 +403,33 @@ void ClienteManager::eliminar(){
 void ClienteManager::restaurar(){
     ClienteArchivo cArchivo;
 
-    Cliente cliente;
-
-    int dniRestaurar;
+    int idRestaurar;
 
     cout<<"------ RESTAURAR CLIENTE ------"<<endl;
     cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-    cout << "Ingrese el dni del cliente eliminado que desea restaurar :";
-    cin >> dniRestaurar;
-    if(dniRestaurar==0){
+    cout << "Ingrese el ID del cliente eliminado que desea restaurar :";
+    cin >> idRestaurar;
+    if(idRestaurar==0){
         return;
     }
 
-    int posicion = cArchivo.buscarDni(dniRestaurar);
+    int posicion = cArchivo.buscarId(idRestaurar);
 
     if(posicion>=0){
         Cliente registro = cArchivo.leer(posicion);
-        registro.setEstado(true);
-        if(cArchivo.modificar(registro, posicion)){
-            cout <<endl<< "CLIENTE RESTAURADO"<< endl<<endl;
+        if(registro.getEstado()==false){
+            registro.setEstado(true);
+            if(cArchivo.modificar(registro, posicion)){
+                cout <<endl<< "CLIENTE RESTAURADO"<< endl<<endl;
+            }else{
+                cout <<endl<< "HUBO UN ERROR"<<endl<<endl;
+            }
         }else{
-            cout <<endl<< "HUBO UN ERROR"<<endl<<endl;
+            cout<<endl<< "NO SE PUDO RESTAURAR EL CLIENTE PORQUE YA SE ENCUENTRA ACTIVO" <<endl <<endl;
         }
 
     }else{
-        cout<<endl<< "NO EXISTE EL DNI INGRESADO"<<endl<<endl;
+        cout<<endl<< "NO EXISTE EL ID INGRESADO"<<endl<<endl;
     }
     system("pause");
 }

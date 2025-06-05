@@ -29,7 +29,7 @@ void Menu::mostrar(){
         cout << "   2. PRODUCTOS" << endl;
         cout << "   3. CLIENTES" << endl;
         cout << "   4. MOVIMIENTOS" << endl;
-        cout << "   0. SALIR" << endl;
+        cout << "   0. SALIR" << endl<<endl;
         cin>>num;
 
         switch(num){
@@ -50,8 +50,8 @@ void Menu::mostrar(){
                 while(true){
                     system("cls");
                     cout << "  ---- MOVIMIENTOS ----" << endl<<endl;
-                    cout << "   1. CARGAR INGRESO" << endl;
-                    cout << "   2. CARGAR EGRESO" << endl;
+                    cout << "   1. INGRESOS" << endl;
+                    cout << "   2. EGRESOS" << endl;
                     cout << "   0. VOLVER" << endl<<endl;
                     cin>>num;
                     switch(num){

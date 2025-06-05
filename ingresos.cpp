@@ -83,7 +83,7 @@ void Ingresos::mostrar() {
     char buf[20];
     cout << "==========================\n";
     cout << "ID Proveedor: " << getIdProveedor() << endl;
-    cout << "ID INGESO:    " << getIdIngreso() << endl;
+    cout << "ID Ingreso:    " << getIdIngreso() << endl;
     cout << "ID Producto : " << getIdProducto()  << endl;
     cout << "Fecha Ingreso: ";
     _fechaIngreso.Mostrar();              // imprime DD/MM/AAAA

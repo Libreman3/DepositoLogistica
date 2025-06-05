@@ -60,7 +60,7 @@ void ProveedorManager::cargar(){
     }while(true);
 
     do{
-        cout<< "Ingrese Razón Social:";
+        cout<< "Ingrese Razón Social: ";
         getline(cin,razonSocial);
         if(razonSocial=="0")return;
         if(razonSocial.empty()){
@@ -97,8 +97,22 @@ void ProveedorManager::cargar(){
         if(mail=="0")return;
         if(mail.empty()){
             cout<<endl<< "POR FAVOR DEBE INGRESAR UN MAIL VÁLIDO!"<<endl<<endl;
+            continue;
         }
-    }while(mail.empty());
+        bool mailRepetido=false;
+        for(int i=0; i<numeroProveedor;i++){
+            registro = pArchivo.leer(i);
+
+            if(registro.getMail()== mail){
+                cout<<endl<< "EL MAIL INGRESADO YA SE ENCUENTRA REGISTRADO!"<<endl<<endl;
+                mailRepetido=true;
+                break;
+            }
+        }
+        if(!mailRepetido){
+            break;
+        }
+    }while(true);
 
     estado = true;
 
@@ -141,6 +155,7 @@ void ProveedorManager::buscar(){
     cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
     cout<< "Ingrese el cuit del proveedor que desea buscar: ";
     cin>>cuitBuscado;
+    cout<<endl;
     if(cuitBuscado=="0"){
         return;
     }
@@ -157,12 +172,12 @@ void ProveedorManager::buscar(){
                 break;
             }
             encontrado=true;
-            cout << endl << "EL PROVEEDOR QUE ESTA BUSCANDO SE ENCUENTRA DADO DE BAJA!"<< endl<<endl;
+            cout << "EL PROVEEDOR QUE ESTA BUSCANDO SE ENCUENTRA DADO DE BAJA!"<< endl<<endl;
             break;
         }
     }
     if (encontrado == false){
-        cout <<endl<< "NO SE ENCONTRÓ PROVEEDOR CON EL NÚMERO DE CUIT INGRESADO!"<<endl<<endl;
+        cout << "NO SE ENCONTRÓ PROVEEDOR CON EL NÚMERO DE CUIT INGRESADO!"<<endl<<endl;
     }
     system("pause");
 }
@@ -172,7 +187,6 @@ void ProveedorManager::modificar(){
     Proveedor proveedor;
 
     int idProveedor;
-
     cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
     cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
     cout << "Ingrese el ID del proveedor que desea modificar: ";
@@ -180,7 +194,6 @@ void ProveedorManager::modificar(){
     if(idProveedor==0){
         return;
     }
-
     int posicion = pArchivo.buscarId(idProveedor);
 
     if(posicion>=0){
@@ -195,22 +208,22 @@ void ProveedorManager::modificar(){
             system("cls");
             cout<<"------ MODIFICAR PROVEEDOR ------"<<endl<<endl;
             cout<< "INGRESE QUE DATO DESEA MODIFICAR:"<<endl;
-            cout<< "1. Numero de CUIT"<<endl;
-            cout<< "2. Razon Social"<<endl;
-            cout<< "3. Direccion"<<endl;
+            cout<< "1. Número de CUIT"<<endl;
+            cout<< "2. Razón Social"<<endl;
+            cout<< "3. Dirección"<<endl;
             cout<< "4. Mail"<<endl;
             cout<< "0. Cancelar"<<endl;
             cout<< endl;
             cin >> dato;
+            cin.ignore();
 
             switch(dato){
             case 1:
                 system("cls");
-                cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
+                cout<<"------ MODIFICAR CUIT PROVEEDOR ------"<<endl;
                 cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
 
                 cout<< "Ingrese número de CUIT: ";
-                cin.ignore();
                 getline(cin,cuit);
 
                 do{
@@ -231,7 +244,6 @@ void ProveedorManager::modificar(){
                     }
                     bool cuitRepetido=false;
                     for(int i=0; i<cantidadRegistros;i++){
-
                         Proveedor registroSecundario = pArchivo.leer(i);
 
                         if(registroSecundario.getCuit()== cuit){
@@ -256,7 +268,7 @@ void ProveedorManager::modificar(){
                 return;
             case 2:
                 system("cls");
-                cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
+                cout<<"------ MODIFICAR RAZÓN SOCIAL PROVEEDOR ------"<<endl;
                 cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
                 do{
                     cout<< "Ingrese la nueva razón social: ";
@@ -290,7 +302,7 @@ void ProveedorManager::modificar(){
                 break;
             case 3:
                 system("cls");
-                cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
+                cout<<"------ MODIFICAR DIRECCIÓN PROVEEDOR ------"<<endl;
                 cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
                 do{
                     cout << "Ingrese la nueva dirección: ";
@@ -310,7 +322,7 @@ void ProveedorManager::modificar(){
                 break;
             case 4:
                 system("cls");
-                cout<<"------ MODIFICAR PROVEEDOR ------"<<endl;
+                cout<<"------ MODIFICAR MAIL PROVEEDOR ------"<<endl;
                 cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
                 do{
                     cout << "Ingrese el nuevo mail: ";
@@ -318,8 +330,22 @@ void ProveedorManager::modificar(){
                     if(mail=="0")return;
                     if(mail.empty()){
                         cout<<endl<< "POR FAVOR DEBE INGRESAR UN MAIL VÁLIDO!"<<endl<<endl;
+                        continue;
                     }
-                }while(mail.empty());
+                    bool mailRepetido=false;
+                    for(int i=0; i<cantidadRegistros;i++){
+                        Proveedor registroSecundario = pArchivo.leer(i);
+
+                        if(registroSecundario.getMail()== mail){
+                            cout<<endl<< "EL MAIL INGRESADO YA SE ENCUENTRA REGISTRADO!"<<endl<<endl;
+                            mailRepetido=true;
+                            break;
+                        }
+                    }
+                    if(!mailRepetido){
+                        break;
+                    }
+                }while(true);
                 registro.setMail(mail);
                 if(pArchivo.modificar(registro,posicion)){
                     cout <<endl<< "PROVEEDOR MODIFICADO"<< endl<<endl;
@@ -336,7 +362,7 @@ void ProveedorManager::modificar(){
                 break;
             }
         } else {
-            cout<< endl<< "El ID ingresado se encuentra eliminado, debe darlo de alta para realizar modificaciones" <<endl<<endl;
+            cout<< endl<< "EL ID INGRESADO SE ENCUENTRA ELIMINADO, DEBE DARLO DE ALTA PARA REALIZAR MODIFICACIONES!" <<endl<<endl;
             system("pause");
         }
     }else{
@@ -372,7 +398,6 @@ void ProveedorManager::eliminar(){
         }else{
             cout << endl << "NO SE PUDO ELIMINAR EL PROVEEDOR PORQUE YA SE ENCUENTRA DADO DE BAJA"<< endl << endl;
         }
-
     }else{
         cout<<endl<< "NO EXISTE EL ID INGRESADO"<<endl<<endl;
     }
@@ -404,7 +429,7 @@ void ProveedorManager::restaurar(){
                 cout <<endl<< "HUBO UN ERROR"<<endl<<endl;
             }
         }else{
-            cout << endl << "NO SE PUSO RESTAURAR EL PROVEEDOR PORQUE YA SE ENCUENTRA ACTIVO" << endl << endl;
+            cout << endl << "NO SE PUDO RESTAURAR EL PROVEEDOR PORQUE YA SE ENCUENTRA ACTIVO" << endl << endl;
         }
     }else{
         cout<<endl<< "NO EXISTE EL ID INGRESADO"<<endl<<endl;

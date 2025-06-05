@@ -66,11 +66,11 @@ Proveedor::Proveedor(int numeroProveedor,std::string cuit, std::string razonSoci
 
 void Proveedor::tarjetaProveedor(){
 
+    cout<< "Número de Proveedor: "<< getNumeroProveedor() << endl;
+    cout<< "Número de CUIT: "<< getCuit() <<endl;
+    cout<< "Razón Social: "<< getRazonSocial() <<endl;
+    cout<< "Dirección: "<< getDireccion() <<endl;
+    cout<< "Mail: "<< getMail() <<endl<<endl;
     cout<< "===================" <<endl;
-    cout<< "Numero de Proveedor: "<< getNumeroProveedor() << endl;
-    cout<< "Numero de CUIT: "<< getCuit() <<endl;
-    cout<< "Razon Social: "<< getRazonSocial() <<endl;
-    cout<< "Direccion: "<< getDireccion() <<endl;
-    cout<< "Mail: "<< getMail() <<endl;
     cout<< endl;
 }

@@ -12,50 +12,56 @@ void ProductoManager::cargar() {
 
     Producto producto;
     ProductoArchivo pArchivo;
+    Producto registro;
 
-    cout << "------- CARGAR PRODUCTO -------" << endl;
+    cout << "-------- CARGAR PRODUCTO -------" << endl;
     cout << "-- PRESIONE '0' PARA CANCELAR --" << endl << endl;
-
-    // ID automático
 
     idProducto = pArchivo.getCantidadProductos() + 1;
     cout << "ID asignado automáticamente: " << idProducto << endl;
 
-    /*cout<< "Ingrese numero de Producto:";    //ESTO EN REALIDAD NO LO DEBERIA PREGUNTAR
-    cin>>idProducto;*/
+    cout << "Ingrese nombre del producto: ";
+    cin.ignore();
+    getline(cin,nombre);
 
-    //cout << " Los Id que no se muestran es por que estan en baja logica " << endl;
-
-     // Limpiar el buffer antes de getline
-
-    // Ingreso de nombre con validación
     do {
-        cout << "Ingrese nombre del producto: ";
-        cin.ignore();
-        getline(cin,nombre);
-
-        if (nombre== "0") return;
+        if(nombre== "0") return;
         if(nombre.empty()){
-            cout << "Debe ingresar un nombre válido." << endl;
+            cout << endl<<"POR FAVOR INGRESE UN NOMBRE VÁLIDO!" << endl<< endl;
+            cout << "Ingrese nombre del producto: ";
+            getline(cin,nombre);
+            continue;
         }
     } while (nombre.empty());
 
-    // Ingreso de marca con validación
+
     do {
         cout << "Ingrese marca del producto: ";
         getline(cin,marca);
         if(marca== "0") return;
         if(marca.empty()){
-            cout << "Debe ingresar una marca válida." << endl;
+            cout << endl<<"POR FAVOR INGRESE UNA MARCA VÁLIDA!" << endl<<endl;
+            continue;
         }
-    } while (marca.empty());
+        bool productoMarcaRepetido = false;
+        for(int i=0;i<idProducto;i++){
+            registro = pArchivo.leer(i);
+
+            if(registro.getNombre()==nombre && registro.getMarca()==marca){
+                cout<<endl<< "LA MARCA INGRESADA YA POSEE ESTE PRODUCTO REGISTRADO!"<<endl<<endl;
+                productoMarcaRepetido = true;
+                break;
+            }
+        }
+        if(!productoMarcaRepetido){
+            break;
+        }
+    } while (true);
 
     estado = true;
 
-    // Crear el producto
     producto = Producto(idProducto, nombre, marca, estado);
 
-    // Guardar en archivo
     if (pArchivo.guardar(producto)) {
         cout <<endl<< "¡Producto guardado correctamente!" << endl<<endl;
     } else {
@@ -69,11 +75,9 @@ void ProductoManager::mostrar() {
     ProductoArchivo pArchivo;
     Producto producto;
 
-    //int totalRegistros = 0;
-    //int productosMostrados = 0;
     int cantidadRegistros = pArchivo.getCantidadProductos();
 
-    cout << "------ LISTA DE PRODUCTOS ------" << endl;
+    cout << "------ LISTA DE PRODUCTOS ACTIVOS ------" <<endl<<endl;
 
     for(int i=0; i<cantidadRegistros; i++){
         producto = pArchivo.leer(i);
@@ -82,29 +86,6 @@ void ProductoManager::mostrar() {
             producto.tarjetaProducto();
         }
     }
-
-    // Recorremos hasta que falle la lectura
-    /*while (true) {
-        producto = pArchivo.leer(totalRegistros); // leer por índice
-        if (producto.get_IdProducto() == 0) {
-            break; // Producto inválido, salimos
-        }
-
-        if (producto.get_Estado()) {
-            producto.mostrarProducto();
-            productosMostrados++;
-        }
-
-        totalRegistros++;
-    }*/
-
-    if (cantidadRegistros == 0) {
-        cout << "No hay productos activos para mostrar." << endl;
-    }
-
-    cout << "Presione una tecla para continuar . . ." << endl;
-    cin.ignore();
-    cin.get();
 }
 
 void ProductoManager::buscar() {
@@ -118,6 +99,7 @@ void ProductoManager::buscar() {
     cout << "-- PRESIONE '0' PARA CANCELAR --" << endl << endl;
     cout << "Ingrese el ID del producto que desea buscar: ";
     cin >> idBuscado;
+    cout << endl;
 
     if (idBuscado == 0) {
         return;
@@ -125,26 +107,22 @@ void ProductoManager::buscar() {
 
     int cantidadRegistros = pArchivo.getCantidadProductos();
 
-    if (cantidadRegistros == 0) {
-        cout << "El archivo está vacío. No se pueden buscar productos." << endl;
-        return;
-    }
-
     for (int i = 0; i < cantidadRegistros; i++) {
         registro = pArchivo.leer(i);
 
-        if (registro.getIdProducto() == idBuscado && registro.getEstado() == true) {
-            //cout << "Producto encontrado:" << endl;
-            registro.tarjetaProducto();  // Mostrar producto solo si está activo
-            encontrado = true;
-            break;
+        if (registro.getIdProducto() == idBuscado){
+                if(registro.getEstado() == true){
+                    registro.tarjetaProducto();
+                    encontrado = true;
+                    break;
+                }
+                encontrado=true;
+                cout<< "EL PRODUCTO QUE ESTA BUSCANDO SE ENCUENTRA DADO DE BAJA!" <<endl<<endl;
         }
     }
-
-    if (!encontrado) {
-        cout << endl << "¡NO SE ENCONTRÓ PRODUCTO CON EL ID INGRESADO!" << endl << endl;
+    if (encontrado==false){
+        cout << endl << "NO SE ENCONTRÓ PRODUCTO CON EL ID INGRESADO!" << endl << endl;
     }
-
     system("pause");
 }
 
@@ -153,6 +131,7 @@ void ProductoManager::modificar() {
     Producto producto;
 
     int idProducto;
+    int cantidadRegistros = pArchivo.getCantidadProductos();
 
     cout << "------ MODIFICAR PRODUCTO ------" << endl;
     cout << "-- PRESIONE '0' PARA CANCELAR --" << endl << endl;
@@ -165,77 +144,101 @@ void ProductoManager::modificar() {
 
     if (posicion >= 0) {
         Producto registro = pArchivo.leer(posicion);
-        int dato;
-        string nombre, marca;
 
-        cin.ignore(); // Limpiar el buffer de entrada
+        if(registro.getEstado()==true){
+            int dato;
+            string nombre, marca;
 
-        system("cls");
-        cout << "------ MODIFICAR PRODUCTO ------" << endl << endl;
-        cout << "¿QUÉ DATO DESEA MODIFICAR?" << endl;
-        cout << "1. Nombre" << endl;
-        cout << "2. Marca" << endl;
-        cout << "0. Cancelar" << endl << endl;
-        cin >> dato;
-        cin.ignore(); // Limpiar el buffer
+            system("cls");
+            cout << "------ MODIFICAR PRODUCTO ------" << endl << endl;
+            cout << "¿QUÉ DATO DESEA MODIFICAR?" << endl;
+            cout << "1. Nombre" << endl;
+            cout << "2. Marca" << endl;
+            cout << "0. Cancelar" << endl << endl;
+            cin >> dato;
+            cin.ignore();
 
-        switch (dato) {
-        case 1:
-            do {
+            switch (dato) {
+            case 1:
                 system("cls");
-                cout<<"------ MODIFICAR PRODUCTO ------"<<endl;
+                cout<<"------ MODIFICAR NOMBRE PRODUCTO ------"<<endl;
                 cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
+
                 cout << "Ingrese el nuevo nombre: ";
-                cin>>nombre;
-                if (nombre == "0") return;
-                if (nombre.empty()) {
-                    cout << "Debe ingresar un nombre válido.\n" << endl;
-                }
-            } while (nombre.empty());
-            registro.setNombre(nombre);
+                getline(cin,nombre);
+                do {
+                    if (nombre == "0") return;
+                    if (nombre.empty()) {
+                        cout << endl<<"POR FAVOR DEBE INGRESAR UN NOMBRE VÁLIDO!" << endl<<endl;
+                        cout << "Ingrese nombre del producto: ";
+                        getline(cin,nombre);
+                        continue;
+                    }
+                } while (nombre.empty());
 
-            break;
+                registro.setNombre(nombre);
+                if(pArchivo.modificar(registro,posicion)){
+                    cout<<endl<< "PRODUCTO MODIFICADO"<<endl<<endl;
+                } else{
+                    cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
+                }system("pause");
+                return;
 
-        case 2:
-            do {
+            case 2:
                 system("cls");
-                cout<<"------ MODIFICAR PRODUCTO ------"<<endl;
-                cout<<"-- PRESIONE '0' PARA CANCELAR --"<<endl<<endl;
-                cout << "Ingrese la nueva marca: ";
-                cin>>marca;
-                if (marca == "0") return;
-                if (marca.empty()) {
-                    cout << "Debe ingresar una marca valida." << endl;
+                cout<<"----- MODIFICAR MARCA PRODUCTO -----"<<endl;
+                cout<<"---- PRESIONE '0' PARA CANCELAR ----"<<endl<<endl;
+                do {
+                    cout << "Ingrese marca del producto: ";
+                    getline(cin,marca);
+                    if(marca== "0") return;
+                    if(marca.empty()){
+                        cout << endl<<"POR FAVOR INGRESE UNA MARCA VÁLIDA!" << endl<<endl;
+                        continue;
+                    }
+                    bool productoMarcaRepetido = false;
+                    for(int i=0;i<cantidadRegistros;i++){
+
+                        Producto registroSecundario = pArchivo.leer(i);
+
+                        if(registroSecundario.getNombre()==nombre && registroSecundario.getMarca()==marca){
+                            cout<<endl<< "LA MARCA INGRESADA YA POSEE ESTE PRODUCTO REGISTRADO!"<<endl<<endl;
+                            productoMarcaRepetido = true;
+                            break;
+                        }
+                    }
+                    if(!productoMarcaRepetido){
+                        break;
+                    }
+                } while (true);
+
+                registro.setMarca(marca);
+                if(pArchivo.modificar(registro,posicion)){
+                    cout <<endl<< "PRODUCTO MODIFICADO"<<endl<<endl;
+                }else{
+                    cout<<endl<< "HUBO UN ERROR INESPERADO"<<endl<<endl;
                 }
-            } while (marca.empty());
-            registro.setMarca(marca);
-            break;
-
-        case 0:
-            break;
-
-        default:
-            cout << "OPCIÓN INCORRECTA" << endl;
-            return;
+                system("pause");
+                break;
+            case 0:
+                break;
+            default:
+                cout << "OPCIÓN INCORRECTA" << endl;
+                system("pause");
+                return;
+            }
+        }else{
+            cout << endl << "EL ID INGRESADO SE ENCUENTRA ELIMINADO, DEBE DARLO DE ALTA PARA REALIZAR MODIFICACIONES!"<<endl<<endl;
+            system("pause");
         }
-
-        if (pArchivo.modificar(registro, posicion)) {
-            cout << endl << "PRODUCTO MODIFICADO" << endl << endl;
-        } else {
-            cout << endl << "HUBO UN ERROR INESPERADO" << endl << endl;
-        }
-
     } else {
         cout << endl << "NO EXISTE EL ID INGRESADO" << endl << endl;
+        system("pause");
     }
-
-    system("pause");
 }
 
 void ProductoManager::eliminar() {
     ProductoArchivo pArchivo;
-
-    Producto producto;  // Este puede ser opcional si no es necesario usarlo en este caso.
 
     int idProductoEliminar;
 
@@ -252,17 +255,19 @@ void ProductoManager::eliminar() {
 
     if (posicion >= 0) {
         Producto registro = pArchivo.leer(posicion);
-        registro.setEstado(false);  // Cambiar el estado a 'false' para indicar que el producto está eliminado.
-
-        if (pArchivo.modificar(registro, posicion)) {
-            cout << endl << "PRODUCTO ELIMINADO" << endl << endl;
-        } else {
-            cout << endl << "HUBO UN ERROR AL ELIMINAR EL PRODUCTO" << endl << endl;
+        if(registro.getEstado()==true){
+            registro.setEstado(false);
+            if (pArchivo.modificar(registro, posicion)) {
+                cout << endl << "PRODUCTO ELIMINADO" << endl << endl;
+            } else {
+                cout << endl << "HUBO UN ERROR AL ELIMINAR EL PRODUCTO" << endl << endl;
+            }
+        }else{
+            cout << endl << "NO SE PUDO ELIMINAR EL PRODUCTO PORQUE YA SE ENCUENTRA DADO DE BAJA!"<<endl<<endl;
         }
     } else {
         cout << endl << "NO EXISTE EL ID INGRESADO" << endl << endl;
     }
-
     system("pause");
 }
 
@@ -285,20 +290,18 @@ void ProductoManager::restaurar() {
 
     if (posicion >= 0) {
         Producto registro = pArchivo.leer(posicion);
-
-        if (registro.getEstado()) {
-            cout << endl << "El producto ya está activo." << endl << endl;
-        } else {
+        if(registro.getEstado()==false){
             registro.setEstado(true);
             if (pArchivo.modificar(registro, posicion)) {
                 cout << endl << "PRODUCTO RESTAURADO" << endl << endl;
             } else {
                 cout << endl << "HUBO UN ERROR" << endl << endl;
             }
+        }else{
+            cout << endl << "NO SE PUDO RESTAURAR EL PRODUCTO PORQUE YA SE ENCUENTRA ACTIVO" <<endl<<endl;
         }
     } else {
         cout << endl << "NO EXISTE EL ID INGRESADO" << endl << endl;
     }
-
     system("pause");
 }

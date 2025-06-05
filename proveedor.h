@@ -4,7 +4,7 @@
 class Proveedor{
 private:
     int _numeroProveedor;
-    char _cuit[12];
+    char _cuit[15];
     char _razonSocial[50];
     char _direccion[50];
     char _mail[50];

@@ -12,11 +12,11 @@ void Cliente::setNumeroCliente(int numeroCliente){
     _numeroCliente=numeroCliente;
 }
 
-int Cliente::getDni(){
+std::string Cliente::getDni(){
     return _dni;
 }
-void Cliente::setDni(int dni){
-    _dni=dni;
+void Cliente::setDni(std::string dni){
+    strcpy(_dni,dni.c_str());
 }
 
 std::string Cliente::getNombre(){
@@ -56,14 +56,14 @@ void Cliente::setEstado(bool estado){
 
 Cliente::Cliente(){
     _numeroCliente = 0;
-    _dni=0;
+    strcpy(_dni, "");
     strcpy(_nombre, "");
     strcpy(_apellido, "");
     strcpy(_direccion, "");
     strcpy(_mail, "");
     _estado= true;
 }
-Cliente::Cliente(int numeroCliente,int dni, std::string nombre,std::string apellido,std::string direccion,std::string mail,bool estado){
+Cliente::Cliente(int numeroCliente,std::string dni, std::string nombre,std::string apellido,std::string direccion,std::string mail,bool estado){
     setNumeroCliente(numeroCliente);
     setDni(dni);
     setNombre(nombre);
@@ -75,12 +75,12 @@ Cliente::Cliente(int numeroCliente,int dni, std::string nombre,std::string apell
 
 void Cliente::tarjetaCliente(){
 
-    cout<< "===================" <<endl;
-    cout<< "Numero de Cliente: "<< getNumeroCliente() << endl;
-    cout<< "Numero de DNI: "<< getDni() <<endl;
+    cout<< "Número de Cliente: "<< getNumeroCliente() << endl;
+    cout<< "Número de DNI: "<< getDni() <<endl;
     cout<< "Nombre: "<< getNombre() <<endl;
     cout<< "Apellido: "<< getApellido() <<endl;
-    cout<< "Direccion: "<< getDireccion() <<endl;
-    cout<< "Mail: "<< getMail() <<endl;
+    cout<< "Dirección: "<< getDireccion() <<endl;
+    cout<< "Mail: "<< getMail() <<endl<<endl;
+    cout<< "===================" <<endl;
     cout<< endl;
 }

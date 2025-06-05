@@ -4,7 +4,7 @@
 class Cliente{
 private:
     int _numeroCliente;
-    int _dni;
+    char _dni[10];
     char _nombre[50];
     char _apellido[50];
     char _direccion[50];
@@ -14,8 +14,8 @@ public:
     int getNumeroCliente();
     void setNumeroCliente(int numeroCliente);
 
-    int getDni();
-    void setDni(int dni);
+    std::string getDni();
+    void setDni(std::string dni);
 
     std::string getNombre();
     void setNombre(std::string nombre);
@@ -33,7 +33,7 @@ public:
     void setEstado(bool estado);
 
     Cliente();
-    Cliente(int numeroCliente,int dni, std::string nombre, std::string apellido, std::string direccion,std::string mail,bool estado);
+    Cliente(int numeroCliente,std::string dni, std::string nombre, std::string apellido, std::string direccion,std::string mail,bool estado);
 
     void tarjetaCliente();
 

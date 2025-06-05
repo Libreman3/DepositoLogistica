@@ -14,6 +14,4 @@ public:
     Cliente leer(int pos);
     bool modificar(Cliente registro, int posicion);
     int buscarId(int idCliente);
-    int buscarDni(int dniCliente);
-    //string buscar (string nombre);
 };

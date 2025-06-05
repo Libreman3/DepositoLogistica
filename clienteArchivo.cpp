@@ -5,6 +5,7 @@ using namespace std;
 ClienteArchivo::ClienteArchivo(){
     _nombreArchivo = "cliente.dat";
 }
+
 ClienteArchivo::ClienteArchivo(std::string nombreArchivo){
     _nombreArchivo = nombreArchivo;
 }
@@ -66,29 +67,6 @@ Cliente ClienteArchivo::leer(int pos){
     fclose(pFile);
 
     return reg;
-}
-
-int ClienteArchivo::buscarDni(int dniCliente){
-    FILE *pFile;
-    Cliente reg;
-
-    int posicion=0;
-
-    pFile = fopen(_nombreArchivo.c_str(), "rb");
-
-    if(pFile == nullptr){
-        return 0;
-    }
-
-    while(fread(&reg, sizeof(Cliente),1,pFile)==1){
-        if(reg.getDni()==dniCliente){
-            fclose(pFile);
-            return posicion;
-        }
-        posicion++;
-    }
-    fclose(pFile);
-    return -1;
 }
 
 int ClienteArchivo::buscarId(int idCliente){
