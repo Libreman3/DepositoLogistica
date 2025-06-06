@@ -529,55 +529,55 @@
 
 1749053332 c:\users\dios no esta muerto\documents\programacion\depositologistica-main\menucliente.h
 
-1749139661 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\cliente.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\cliente.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"cliente.h"
 
-1749139661 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\cliente.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\cliente.h
 	<string>
 
-1749145271 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\clientearchivo.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\clientearchivo.cpp
 	<iostream>
 	"clienteArchivo.h"
 
-1749145271 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\clientearchivo.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\clientearchivo.h
 	<string>
 	"cliente.h"
 
-1749142368 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\clientemanager.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\clientemanager.cpp
 	<iostream>
 	"clienteManager.h"
 	"cliente.h"
 	"clienteArchivo.h"
 
-1749126812 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\clientemanager.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\clientemanager.h
 
-1749126812 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\fecha.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\fecha.cpp
 	"Fecha.h"
 
-1749126812 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\fecha.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\fecha.h
 	<iostream>
 
-1749152279 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresos.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresos.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"ingresos.h"
 
-1749126812 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresos.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresos.h
 	"fecha.h"
 
-1749126812 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresosarchivo.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresosarchivo.cpp
 	"ingresosArchivo.h"
 	<cstdio>
 
-1749126812 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresosarchivo.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresosarchivo.h
 	<string>
 	"ingresos.h"
 
-1749126812 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresosmanager.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresosmanager.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -588,33 +588,33 @@
 	"proveedorArchivo.h"
 	"productoArchivo.h"
 
-1749126812 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresosmanager.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\ingresosmanager.h
 	"Ingresos.h"
 	"IngresosArchivo.h"
 
-1749126813 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedorarchivo.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedorarchivo.h
 	<string>
 	"proveedor.h"
 
-1749136467 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedor.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedor.h
 	<string>
 
-1749126815 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\productoarchivo.h
+1749239019 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\productoarchivo.h
 	<iostream>
 	<string>
 	"producto.h"
 
-1749126815 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\producto.h
+1749239019 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\producto.h
 	<string>
 
-1749126812 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\main.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\main.cpp
 	<iostream>
 	"proveedor.h"
 	"Menu.h"
 
-1749126812 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menu.h
+1749239012 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menu.h
 
-1749152075 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menu.cpp
+1749239012 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menu.cpp
 	<iostream>
 	"menu.h"
 	"menuProveedor.h"
@@ -622,69 +622,69 @@
 	"menuCliente.h"
 	"menuIngresos.h"
 
-1749126813 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuproveedor.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuproveedor.h
 
-1749126815 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuproducto.h
+1749239019 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuproducto.h
 
-1749126812 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menucliente.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menucliente.h
 
-1749126812 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuingresos.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuingresos.h
 
-1749126812 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuingresos.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuingresos.cpp
 	<iostream>
 	<cstdlib>
 	<limits>
 	"menuIngresos.h"
 	"ingresosManager.h"
 
-1749126813 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\produtoarchivo.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\produtoarchivo.cpp
 	<iostream>
 	"ProductoArchivo.h"
 	"Producto.h"
 
-1749130729 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedor.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedor.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"proveedor.h"
 
-1749126813 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedorarchivo.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedorarchivo.cpp
 	<iostream>
 	"proveedorArchivo.h"
 
-1749151852 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedormanager.cpp
+1749239014 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedormanager.cpp
 	<iostream>
 	<string>
 	"proveedorManager.h"
 	"proveedor.h"
 	"proveedorArchivo.h"
 
-1749126812 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedormanager.h
+1749239013 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\proveedormanager.h
 
-1749126812 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menucliente.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menucliente.cpp
 	<iostream>
 	"menuCliente.h"
 	"clienteManager.h"
 
-1749146330 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuproducto.cpp
+1749239019 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuproducto.cpp
 	<iostream>
 	"menuProducto.h"
 	"productoManager.h"
 
-1749126815 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\productomanager.h
+1749239019 c:\users\dairy\onedrive\documents\programacion\depositologistica-main\productomanager.h
 
-1749126813 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuproveedor.cpp
+1749239013 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\menuproveedor.cpp
 	<iostream>
 	"menuProveedor.h"
 	"ProveedorManager.h"
 
-1749133754 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\producto.cpp
+1749239019 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\producto.cpp
 	<iostream>
 	<cstring>
 	<string>
 	"producto.h"
 
-1749152075 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\productomanager.cpp
+1749239019 source:c:\users\dairy\onedrive\documents\programacion\depositologistica-main\productomanager.cpp
 	<iostream>
 	"productoManager.h"
 	"producto.h"
