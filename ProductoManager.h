@@ -1,19 +1,14 @@
-#ifndef PRODUCTOMANAGER_H_INCLUDED
-#define PRODUCTOMANAGER_H_INCLUDED
 #pragma once
 
 class ProductoManager {
+private:
+
 public:
     void cargar();
-    void cargarProducto();
-    void mostrarProductos();
-    void buscarProducto();
-    void modificarProducto();
-    void eliminarProducto();
-    void restaurarProducto();
+    void mostrar();
+    void buscar();
+    void modificar();
+    void eliminar();
+    void restaurar();
 
-private:
-    // Aquí podrías declarar variables privadas si necesitás
 };
-
-#endif // PRODUCTOMANAGER_H_INCLUDED

@@ -1,60 +1,58 @@
 #include <iostream>
-#include <cstring>
-#include <string>
-#include "producto.h"
-#include "ProductoArchivo.h"
-#include "ProductoManager.h"
-#include "MenuProducto.h"
+#include "menuProducto.h"
+#include "productoManager.h"
 
-void MenuProducto::mostrarMenuProducto(){
-     int opcion;
-    ProductoManager manager;
+using namespace std;
+
+void MenuProducto::mostrar(){
+    ProductoManager productoManager;
+    int opcion;
 
     do {
         system("cls");
-        cout << "===== MENU PRODUCTO =====" << endl;
-        cout << "1. Cargar producto" << endl;
-        cout << "2. Mostrar productos" << endl;
-        cout << "3. Buscar producto por ID" << endl;
-        cout << "4. Modificar producto" << endl;
-        cout << "5. Eliminar producto" << endl;
-        cout << "6. Restaurar producto" << endl;
-        cout << "0. Volver al menu principal" << endl;
-        cout << "==========================" << endl;
-        cout << "Seleccione una opcion: ";
+        cout << "  ---- PRODUCTOS ----" << endl<< endl;
+        cout << "   1. CARGAR PRODUCTO" << endl;
+        cout << "   2. MOSTRAR PRODUCTOS" << endl;
+        cout << "   3. BUSCAR PRODUCTO" << endl;
+        cout << "   4. MODIFICAR PRODUCTO" << endl;
+        cout << "   5. ELIMINAR PRODUCTO" << endl;
+        cout << "   6. RESTAURAR PRODUCTO" << endl;
+        cout << "   0. VOLVER AL MENU PRINCIPAL" << endl<< endl;
         cin >> opcion;
 
         switch (opcion) {
         case 1:
-            manager.cargar();
+            system("cls");
+            productoManager.cargar();
             break;
         case 2:
-            manager.mostrarProductos();
+            system("cls");
+            productoManager.mostrar();
+            system("pause");
             break;
         case 3:
-            manager.buscarProducto();
+            system("cls");
+            productoManager.buscar();
             break;
         case 4:
-            manager.modificarProducto();
+            system("cls");
+            productoManager.modificar();
             break;
         case 5:
-            manager.eliminarProducto();
+            system("cls");
+            productoManager.eliminar();
             break;
         case 6:
-            manager.restaurarProducto();
+            system("cls");
+            productoManager.restaurar();
             break;
         case 0:
-            cout << "Volviendo al menu principal..." << endl;
             break;
         default:
-            cout << "Opcion invalida. Intente nuevamente." << endl;
+            system("cls");
+            cout<<"Opcion incorrecta, por favor intente nuevamente"<<endl;
             system("pause");
             break;
         }
-
     } while (opcion != 0);
-
 }
-
-
-

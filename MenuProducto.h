@@ -4,5 +4,5 @@ class MenuProducto{
 private:
 
 public:
-    void mostrarMenuProducto();
+    void mostrar();
 };

@@ -1,47 +1,31 @@
 #pragma once
 #include <string>
-#include "proveedor.h"
+
 class Producto{
 private:
     int _idProducto;
-    float _precio;
-    int _cantidadStock;
-    char _descripcion[50];
     char _nombre[50];
     char _marca[50];
     bool _estado;
 
 public:
-    // Getters y Setters
-    int get_IdProducto();
-    void set_IdProducto(int idProducto);
+    int getIdProducto();
+    void setIdProducto(int idProducto);
 
-    float get_precio();
-    void set_precio(float precio);
+    std::string getNombre();
+    void setNombre(std::string nombre);
 
-    int get_cantidadStock();
-    void set_cantidadStock(int cantidadStock);
+    std::string getMarca();
+    void setMarca(std::string marca);
 
-    std::string get_descripcion();
-    void set_descripcion(std::string descripcion);
+    bool getEstado();
+    void setEstado(bool estado);
 
-
-    std::string get_Nombre();
-    void set_Nombre(std::string nombre);
-
-    std::string get_Marca();
-    void set_Marca(std::string marca);
-
-    bool get_Estado();
-    void set_Estado(bool estado);
-
-    // Constructores
     Producto();
-    Producto(int idProducto, float precio, int cantidadStock, std::string descripcion, std::string nombre, std::string marca, bool estado);
+    Producto(int idProducto, std::string nombre, std::string marca, bool estado);
 
-    // Métodos adicionales
-    void cargarProducto();
-    void mostrarProducto();
+    //Métodos adicionales
+    //void cargarProducto();
+    //void mostrarProducto();
+    void tarjetaProducto();
 };
-
-

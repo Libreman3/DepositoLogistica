@@ -690,3 +690,166 @@
 	"producto.h"
 	"productoArchivo.h"
 
+1749679957 source:c:\users\matias pc\desktop\logistica\main.cpp
+	<iostream>
+	"proveedor.h"
+	"Menu.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\proveedor.h
+	<string>
+
+1749239587 c:\users\matias pc\desktop\logistica\menu.h
+
+1749239587 source:c:\users\matias pc\desktop\logistica\cliente.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"cliente.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\cliente.h
+	<string>
+
+1749239587 source:c:\users\matias pc\desktop\logistica\clientearchivo.cpp
+	<iostream>
+	"clienteArchivo.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\clientearchivo.h
+	<string>
+	"cliente.h"
+
+1749686632 source:c:\users\matias pc\desktop\logistica\clientemanager.cpp
+	<iostream>
+	"clienteManager.h"
+	"cliente.h"
+	"clienteArchivo.h"
+	<limits>
+
+1749239587 c:\users\matias pc\desktop\logistica\clientemanager.h
+
+1749239587 source:c:\users\matias pc\desktop\logistica\fecha.cpp
+	"Fecha.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\fecha.h
+	<iostream>
+
+1749239587 source:c:\users\matias pc\desktop\logistica\ingresos.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"ingresos.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\ingresos.h
+	"fecha.h"
+
+1749239587 source:c:\users\matias pc\desktop\logistica\ingresosarchivo.cpp
+	"ingresosArchivo.h"
+	<cstdio>
+
+1749239587 c:\users\matias pc\desktop\logistica\ingresosarchivo.h
+	<string>
+	"ingresos.h"
+
+1749239587 source:c:\users\matias pc\desktop\logistica\ingresosmanager.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"ingresosManager.h"
+	"ingresos.h"
+	"ingresosArchivo.h"
+	"fecha.h"
+	"proveedorArchivo.h"
+	"productoArchivo.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\ingresosmanager.h
+	"Ingresos.h"
+	"IngresosArchivo.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\proveedorarchivo.h
+	<string>
+	"proveedor.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\productoarchivo.h
+	<iostream>
+	<string>
+	"producto.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\producto.h
+	<string>
+
+1749239587 source:c:\users\matias pc\desktop\logistica\menu.cpp
+	<iostream>
+	"menu.h"
+	"menuProveedor.h"
+	"menuProducto.h"
+	"menuCliente.h"
+	"menuIngresos.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\menuproveedor.h
+
+1749239587 c:\users\matias pc\desktop\logistica\menuproducto.h
+
+1749239587 c:\users\matias pc\desktop\logistica\menucliente.h
+
+1749239587 c:\users\matias pc\desktop\logistica\menuingresos.h
+
+1749239587 source:c:\users\matias pc\desktop\logistica\menuingresos.cpp
+	<iostream>
+	<cstdlib>
+	<limits>
+	"menuIngresos.h"
+	"ingresosManager.h"
+
+1749239587 source:c:\users\matias pc\desktop\logistica\menuproducto.cpp
+	<iostream>
+	"menuProducto.h"
+	"productoManager.h"
+
+1749239587 c:\users\matias pc\desktop\logistica\productomanager.h
+
+1749239587 source:c:\users\matias pc\desktop\logistica\producto.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"producto.h"
+
+1749239587 source:c:\users\matias pc\desktop\logistica\productomanager.cpp
+	<iostream>
+	"productoManager.h"
+	"producto.h"
+	"productoArchivo.h"
+
+1749239587 source:c:\users\matias pc\desktop\logistica\produtoarchivo.cpp
+	<iostream>
+	"ProductoArchivo.h"
+	"Producto.h"
+
+1749239587 source:c:\users\matias pc\desktop\logistica\proveedor.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"proveedor.h"
+
+1749239587 source:c:\users\matias pc\desktop\logistica\proveedorarchivo.cpp
+	<iostream>
+	"proveedorArchivo.h"
+
+1749681969 source:c:\users\matias pc\desktop\logistica\proveedormanager.cpp
+	<iostream>
+	<string>
+	"proveedorManager.h"
+	"proveedor.h"
+	"proveedorArchivo.h"
+	<limits>
+
+1749239587 c:\users\matias pc\desktop\logistica\proveedormanager.h
+
+1749239587 source:c:\users\matias pc\desktop\logistica\menucliente.cpp
+	<iostream>
+	"menuCliente.h"
+	"clienteManager.h"
+
+1749239587 source:c:\users\matias pc\desktop\logistica\menuproveedor.cpp
+	<iostream>
+	"menuProveedor.h"
+	"ProveedorManager.h"
+
