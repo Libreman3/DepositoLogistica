@@ -1,24 +1,23 @@
 #include <iostream>
-#include <cstdlib>
 #include <limits>
-#include "menuIngresos.h"
-#include "ingresosManager.h"
+#include "menuEgresos.h"
+#include "egresosManager.h"
 
 using namespace std;
 
-void MenuIngresos::mostrar() {
-    IngresosManager mgr;
+void MenuEgresos::mostrar() {
+    EgresosManager mgr;
     int opcion = -1;
 
     do {
         system("cls");
-        cout << "==== MENU INGRESOS ====\n\n";
-        cout << "1. Cargar ingreso\n";
-        cout << "2. Mostrar ingresos\n";
-        cout << "3. Buscar ingreso\n";
-        cout << "4. Eliminar ingreso\n";
-        cout << "0. Volver al menú principal\n\n";
-        cout << "Seleccione una opcion: ";
+        cout << "==== MENU EGRESOS ====\n\n";
+        cout << "1. Cargar egreso\n";
+        cout << "2. Mostrar egresos\n";
+        cout << "3. Buscar egreso\n";
+        cout << "4. Eliminar egreso\n";
+        cout << "0. Volver al menu principal\n\n";
+        cout << "Seleccione una opción: ";
         cin >> opcion;
 
         system("cls");
@@ -27,9 +26,9 @@ void MenuIngresos::mostrar() {
             case 2: mgr.mostrar();   break;
             case 3: mgr.buscar();    break;
             case 4: mgr.eliminar();  break;
-            case 0: /* Salir */      break;
+            case 0:                  break;
             default:
-                cout << "Opción invalida. Intente de nuevo.\n";
+                cout << "Opcion invalida. Intente de nuevo.\n";
         }
 
         if (opcion != 0) {
@@ -39,3 +38,4 @@ void MenuIngresos::mostrar() {
         }
     } while (opcion != 0);
 }
+

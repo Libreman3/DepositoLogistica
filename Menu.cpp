@@ -4,6 +4,7 @@
 #include "menuProducto.h"
 #include "menuCliente.h"
 #include "menuIngresos.h"
+#include "menuEgresos.h"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ void Menu::mostrar(){
     MenuProducto menuProducto;
     MenuCliente menuCliente;
     MenuIngresos menuIngresos;
+    MenuEgresos menuEgresos;
 
     int num;
 
@@ -59,10 +61,9 @@ void Menu::mostrar(){
                             system("cls");
                             menuIngresos.mostrar();
                             break;
-                        case 2:
+                         case 2:
                             system("cls");
-                            cout << "funcion de cargar egreso" << endl;
-                            system("pause");
+                            menuEgresos.mostrar();
                             break;
                         case 0:
                             system("cls");

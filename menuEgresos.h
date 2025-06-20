@@ -1,6 +1,6 @@
 #pragma once
 
-class MenuIngresos {
+class MenuEgresos {
 public:
     void mostrar();
 };

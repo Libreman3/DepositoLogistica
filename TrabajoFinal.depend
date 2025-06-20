@@ -322,13 +322,14 @@
 
 1747776558 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menu.h
 
-1749929313 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menu.cpp
+1750388376 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menu.cpp
 	<iostream>
 	"menu.h"
 	"menuProveedor.h"
 	"menuProducto.h"
 	"menuCliente.h"
 	"menuIngresos.h"
+	"menuEgresos.h"
 
 1747776558 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\proveedormanager.h
 
@@ -388,7 +389,7 @@
 	"ProductoArchivo.h"
 	"Producto.h"
 
-1750007342 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosmanager.cpp
+1750009410 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosmanager.cpp
 	<iostream>
 	<string>
 	<cstring>
@@ -399,11 +400,11 @@
 	"proveedorArchivo.h"
 	"productoArchivo.h"
 
-1750006977 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosarchivo.cpp
+1750390056 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosarchivo.cpp
 	"ingresosArchivo.h"
 	<cstdio>
 
-1750006977 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosarchivo.h
+1750390056 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosarchivo.h
 	<string>
 	"ingresos.h"
 
@@ -416,16 +417,16 @@
 	<string>
 	"ingresos.h"
 
-1750007529 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menuingresos.cpp
+1750388316 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menuingresos.cpp
 	<iostream>
 	<cstdlib>
 	<limits>
 	"menuIngresos.h"
 	"ingresosManager.h"
 
-1748017457 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menuingresos.h
+1750388316 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menuingresos.h
 
-1748289533 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosmanager.h
+1750388582 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\ingresosmanager.h
 	"Ingresos.h"
 	"IngresosArchivo.h"
 
@@ -861,4 +862,37 @@
 	<iostream>
 	"menuProveedor.h"
 	"ProveedorManager.h"
+
+1750386254 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\egresos.cpp
+	<iostream>
+	<cstring>
+	"egresos.h"
+
+1750386254 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\egresos.h
+	"fecha.h"
+
+1750384743 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\egresosarchivo.cpp
+
+1750389161 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\egresosmanager.cpp
+	"egresosManager.h"
+	"egresosArchivo.h"
+	"egresos.h"
+	"fecha.h"
+	"proveedorArchivo.h"
+	"productoArchivo.h"
+	<iostream>
+
+1750388316 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menuegresos.h
+
+1750390056 source:c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\menuegresos.cpp
+	<iostream>
+	<limits>
+	"menuEgresos.h"
+	"egresosManager.h"
+
+1750388607 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\egresosmanager.h
+
+1750390414 c:\users\pc\desktop\tpintegradorprogramacion2\depositologistica\egresosarchivo.h
+	<string>
+	"egresos.h"
 

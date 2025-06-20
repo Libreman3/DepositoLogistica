@@ -1,8 +1,6 @@
-#pragma once
-#include "Ingresos.h"
-#include "IngresosArchivo.h"
 
-class IngresosManager {
+
+class EgresosManager {
 public:
     void cargar();
     void mostrar();

@@ -12,8 +12,6 @@ public:
     bool    guardar(Ingresos registro);
     int     getCantidadIngresos();
     Ingresos leer(int pos);
-    int     buscarProveedor(int idProveedor);
-    int     buscarProducto(int idProducto);
     int     buscarPorIdIngreso(int idIngreso);
     bool    modificar(Ingresos registro, int posicion);
 };

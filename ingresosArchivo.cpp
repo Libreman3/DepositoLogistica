@@ -48,50 +48,6 @@ Ingresos IngresosArchivo::leer(int pos) {
     return reg;
 }
 
-int IngresosArchivo::buscarProveedor(int idProveedor) {
-    FILE *pFile;
-    Ingresos reg;
-    int posicion = 0;
-
-    pFile = fopen(_nombreArchivo.c_str(), "rb");
-    if (pFile == nullptr) {
-        return -1;
-    }
-
-    while (fread(&reg, sizeof(Ingresos), 1, pFile) == 1) {
-        if (reg.getIdProveedor() == idProveedor) {
-            fclose(pFile);
-            return posicion;
-        }
-        posicion++;
-    }
-
-    fclose(pFile);
-    return -1;
-}
-
-int IngresosArchivo::buscarProducto(int idProducto) {
-    FILE *pFile;
-    Ingresos reg;
-    int posicion = 0;
-
-    pFile = fopen(_nombreArchivo.c_str(), "rb");
-    if (pFile == nullptr) {
-        return -1;
-    }
-
-    while (fread(&reg, sizeof(Ingresos), 1, pFile) == 1) {
-        if (reg.getIdProducto() == idProducto) {
-            fclose(pFile);
-            return posicion;
-        }
-        posicion++;
-    }
-
-    fclose(pFile);
-    return -1;
-}
-
 int IngresosArchivo::buscarPorIdIngreso(int idIngreso) {
     FILE *pFile;
     Ingresos reg;
