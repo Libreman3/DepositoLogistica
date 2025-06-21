@@ -32,10 +32,5 @@ void MenuIngresos::mostrar() {
                 cout << "Opción invalida. Intente de nuevo.\n";
         }
 
-        if (opcion != 0) {
-            cout << "\nPresione ENTER para continuar...";
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cin.get();
-        }
     } while (opcion != 0);
 }

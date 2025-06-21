@@ -1,6 +1,6 @@
 #pragma once
 
-class MenuEgresos {
+class StockManager {
 public:
     void mostrar();
 };

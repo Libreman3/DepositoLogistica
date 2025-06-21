@@ -3,24 +3,24 @@
 
 class Egresos {
 private:
-    int _idProveedor;
+    int _idCliente;
     int _idProducto;
     int _idEgreso;
     Fecha _fechaEgreso;
-    char _almacenamiento[20][20];
+    int _cantidad;
     bool _estado;
 
 public:
     Egresos();
-    Egresos(int idProv,
+    Egresos(int idClien,
             int idProd,
             int idEgreso,
             Fecha fecha,
-            const char almac[20][20],
+            int cantidad,
             bool estado = true);
 
-    int getIdProveedor() const;
-    void setIdProveedor(int idProv);
+    int getIdCliente() const;
+    void setIdCliente(int idClien);
 
     int getIdProducto() const;
     void setIdProducto(int idProd);
@@ -31,8 +31,8 @@ public:
     Fecha getFechaEgreso() const;
     void setFechaEgreso(const Fecha &fecha);
 
-    void getAlmacenamiento(int index, char out[20]) const;
-    void setAlmacenamiento(int index, const char almac[20]);
+    int getCantidad() const;
+    void setCantidad(int cantidad);
 
     bool getEstado() const;
     void setEstado(bool estado);

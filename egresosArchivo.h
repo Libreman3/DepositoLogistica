@@ -18,4 +18,3 @@ public:
 
     bool modificar(const Egresos& registro, int posicion);
 };
-

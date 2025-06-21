@@ -896,3 +896,231 @@
 	<string>
 	"egresos.h"
 
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\cliente.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"cliente.h"
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\cliente.h
+	<string>
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\clientearchivo.cpp
+	<iostream>
+	"clienteArchivo.h"
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\clientearchivo.h
+	<string>
+	"cliente.h"
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\clientemanager.cpp
+	<iostream>
+	"clienteManager.h"
+	"cliente.h"
+	"clienteArchivo.h"
+	<limits>
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\clientemanager.h
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\fecha.cpp
+	"Fecha.h"
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\fecha.h
+	<iostream>
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\ingresos.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"ingresos.h"
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\ingresos.h
+	"fecha.h"
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\ingresosarchivo.cpp
+	"ingresosArchivo.h"
+	<cstdio>
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\ingresosarchivo.h
+	<string>
+	"ingresos.h"
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\ingresosmanager.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"ingresosManager.h"
+	"ingresos.h"
+	"ingresosArchivo.h"
+	"fecha.h"
+	"proveedorArchivo.h"
+	"productoArchivo.h"
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\ingresosmanager.h
+	"Ingresos.h"
+	"IngresosArchivo.h"
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\proveedorarchivo.h
+	<string>
+	"proveedor.h"
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\proveedor.h
+	<string>
+
+1750418522 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\productoarchivo.h
+	<iostream>
+	<string>
+	"producto.h"
+
+1750418522 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\producto.h
+	<string>
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\main.cpp
+	<iostream>
+	"proveedor.h"
+	"Menu.h"
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menu.h
+
+1750476816 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menu.cpp
+	<iostream>
+	"menu.h"
+	"menuProveedor.h"
+	"menuProducto.h"
+	"menuCliente.h"
+	"menuIngresos.h"
+	"menuEgresos.h"
+	"stockManager.h"
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menuproveedor.h
+
+1750418522 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menuproducto.h
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menucliente.h
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menuingresos.h
+
+1750419838 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menuegresos.h
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menucliente.cpp
+	<iostream>
+	"menuCliente.h"
+	"clienteManager.h"
+
+1750473508 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menuingresos.cpp
+	<iostream>
+	<cstdlib>
+	<limits>
+	"menuIngresos.h"
+	"ingresosManager.h"
+
+1750418522 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menuproducto.cpp
+	<iostream>
+	"menuProducto.h"
+	"productoManager.h"
+
+1750418522 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\productomanager.h
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menuproveedor.cpp
+	<iostream>
+	"menuProveedor.h"
+	"ProveedorManager.h"
+
+1750418518 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\proveedormanager.h
+
+1750418522 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\producto.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"producto.h"
+
+1750418522 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\productomanager.cpp
+	<iostream>
+	"productoManager.h"
+	"producto.h"
+	"productoArchivo.h"
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\produtoarchivo.cpp
+	<iostream>
+	"ProductoArchivo.h"
+	"Producto.h"
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\proveedor.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"proveedor.h"
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\proveedorarchivo.cpp
+	<iostream>
+	"proveedorArchivo.h"
+
+1750418518 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\proveedormanager.cpp
+	<iostream>
+	<string>
+	"proveedorManager.h"
+	"proveedor.h"
+	"proveedorArchivo.h"
+	<limits>
+
+1750478397 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\egresos.cpp
+	<iostream>
+	<cstring>
+	"egresos.h"
+
+1750478629 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\egresos.h
+	"fecha.h"
+
+1750419669 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\egresosarchivo.cpp
+	"egresosArchivo.h"
+	<cstdio>
+
+1750419669 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\egresosarchivo.h
+	<string>
+	"egresos.h"
+
+1750478397 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\egresosmanager.cpp
+	"egresosManager.h"
+	"egresosArchivo.h"
+	"egresos.h"
+	"fecha.h"
+	"clienteArchivo.h"
+	"productoArchivo.h"
+	<iostream>
+	<string>
+	<cstring>
+
+1750420382 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\egresosmanager.h
+	"egresos.h"
+	"egresosArchivo.h"
+
+1750419669 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\menuegresos.cpp
+	<iostream>
+	<limits>
+	"menuEgresos.h"
+	"egresosManager.h"
+
+1750476816 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\stockmanager.h
+
+1750478397 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\stock.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"stockManager.h"
+	"productoArchivo.h"
+	"producto.h"
+	"stock.h"
+	"ingresosArchivo.h"
+	"egresosArchivo.h"
+
+1750477548 c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\stock.h
+
+1750477520 source:c:\users\cami\documents\para leo\programacion\facultad\depositologistica-main\stockmanager.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"stockManager.h"
+	"productoArchivo.h"
+	"producto.h"
+	"stock.h"
+

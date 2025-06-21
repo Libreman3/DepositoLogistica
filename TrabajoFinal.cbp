@@ -51,6 +51,18 @@
 		<Unit filename="clienteManager.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="egresos.cpp" />
+		<Unit filename="egresos.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="egresosArchivo.cpp" />
+		<Unit filename="egresosArchivo.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="egresosManager.cpp" />
+		<Unit filename="egresosManager.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h">
 			<Option target="&lt;{~None~}&gt;" />
@@ -66,6 +78,7 @@
 		<Unit filename="menuCliente.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="menuEgresos.cpp" />
 		<Unit filename="menuIngresos.cpp" />
 		<Unit filename="menuIngresos.h" />
 		<Unit filename="menuProducto.cpp" />
@@ -97,6 +110,14 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="proveedorManager.cpp" />
+		<Unit filename="stock.cpp" />
+		<Unit filename="stock.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="stockManager.cpp" />
+		<Unit filename="stockManager.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

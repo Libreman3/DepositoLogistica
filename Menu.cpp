@@ -5,6 +5,7 @@
 #include "menuCliente.h"
 #include "menuIngresos.h"
 #include "menuEgresos.h"
+#include "stockManager.h"
 
 using namespace std;
 
@@ -14,6 +15,7 @@ void Menu::mostrar(){
     MenuCliente menuCliente;
     MenuIngresos menuIngresos;
     MenuEgresos menuEgresos;
+    StockManager stockManager;
 
     int num;
 
@@ -31,6 +33,7 @@ void Menu::mostrar(){
         cout << "   2. PRODUCTOS" << endl;
         cout << "   3. CLIENTES" << endl;
         cout << "   4. MOVIMIENTOS" << endl;
+        cout << "   5. STOCK" << endl;
         cout << "   0. SALIR" << endl<<endl;
         cin>>num;
 
@@ -46,7 +49,6 @@ void Menu::mostrar(){
             case 3:
                 system("cls");
                 menuCliente.mostrar();
-                /**/
                 break;
             case 4:
                 while(true){
@@ -78,6 +80,10 @@ void Menu::mostrar(){
                         break;
                     }
                 }
+                break;
+            case 5:
+                system("cls");
+                stockManager.mostrar();
                 break;
             case 0:
                 system("cls");

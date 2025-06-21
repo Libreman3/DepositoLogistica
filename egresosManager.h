@@ -1,4 +1,6 @@
-
+#pragma once
+#include "egresos.h"
+#include "egresosArchivo.h"
 
 class EgresosManager {
 public:
@@ -7,4 +9,3 @@ public:
     void buscar();
     void eliminar();
 };
-

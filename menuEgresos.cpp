@@ -38,4 +38,3 @@ void MenuEgresos::mostrar() {
         }
     } while (opcion != 0);
 }
-
