@@ -20,7 +20,7 @@ int Stock::calcularStock(int idProducto){
 
     for (int i = 0; i < totalIngresos; i++) {
         Ingresos ingreso = ingresosArchivo.leer(i);
-        if (ingreso.getIdProducto() == idProducto && ingreso.getEstado()) {
+        if (ingreso.getIdProducto() == idProducto) {
             char buffer[20];
             ingreso.getAlmacenamiento(3, buffer);
             stock += atoi(buffer);
@@ -29,7 +29,7 @@ int Stock::calcularStock(int idProducto){
 
     for (int i = 0; i < totalEgresos; i++) {
         Egresos egreso = egresosArchivo.leer(i);
-        if (egreso.getIdProducto() == idProducto && egreso.getEstado()) {
+        if (egreso.getIdProducto() == idProducto) {
             stock -= egreso.getCantidad();
         }
     }

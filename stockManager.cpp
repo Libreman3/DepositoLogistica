@@ -21,13 +21,14 @@ void StockManager::mostrar(){
         producto = pArchivo.leer(i);
 
         if(producto.getEstado()==true){
-           int idProducto = producto.getIdProducto(); //ver si esto lo puedeo meter en el parentesis de abajo
-           int cantidadStock = stock.calcularStock(idProducto);
+           int cantidadStock = stock.calcularStock(producto.getIdProducto());
 
-        cout<<endl<< "Producto: "<<idProducto<<endl;
-        cout<< "Sotck actual: "<<cantidadStock<<endl<<endl;
-        cout<< "=============================" <<endl<<endl;
-
+           if(cantidadStock>0){
+               cout<<endl<< "Producto: "<<producto.getNombre()<<endl;
+               cout<< "Marca: "<<producto.getMarca()<<endl;
+               cout<< "Sotck actual: "<<cantidadStock<<endl<<endl;
+               cout<< "=============================" <<endl<<endl;
+           }
         }
     } system("pause");
 }
