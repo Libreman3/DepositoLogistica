@@ -1124,3 +1124,233 @@
 	"producto.h"
 	"stock.h"
 
+1750480347 source:c:\users\matias pc\desktop\actualizacion\cliente.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"cliente.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\cliente.h
+	<string>
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\clientearchivo.cpp
+	<iostream>
+	"clienteArchivo.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\clientearchivo.h
+	<string>
+	"cliente.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\clientemanager.cpp
+	<iostream>
+	"clienteManager.h"
+	"cliente.h"
+	"clienteArchivo.h"
+	<limits>
+
+1750480347 c:\users\matias pc\desktop\actualizacion\clientemanager.h
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\egresos.cpp
+	<iostream>
+	<cstring>
+	"egresos.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\egresos.h
+	"fecha.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\fecha.h
+	<iostream>
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\egresosarchivo.cpp
+	"egresosArchivo.h"
+	<cstdio>
+
+1750480347 c:\users\matias pc\desktop\actualizacion\egresosarchivo.h
+	<string>
+	"egresos.h"
+
+1750527342 source:c:\users\matias pc\desktop\actualizacion\egresosmanager.cpp
+	"egresosManager.h"
+	"egresosArchivo.h"
+	"egresos.h"
+	"fecha.h"
+	"clienteArchivo.h"
+	"productoArchivo.h"
+	"stock.h"
+	"stockManager.h"
+	<iostream>
+	<string>
+	<cstring>
+
+1750480347 c:\users\matias pc\desktop\actualizacion\egresosmanager.h
+	"egresos.h"
+	"egresosArchivo.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\productoarchivo.h
+	<iostream>
+	<string>
+	"producto.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\producto.h
+	<string>
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\fecha.cpp
+	"Fecha.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\ingresos.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"ingresos.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\ingresos.h
+	"fecha.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\ingresosarchivo.cpp
+	"ingresosArchivo.h"
+	<cstdio>
+
+1750480347 c:\users\matias pc\desktop\actualizacion\ingresosarchivo.h
+	<string>
+	"ingresos.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\ingresosmanager.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"ingresosManager.h"
+	"ingresos.h"
+	"ingresosArchivo.h"
+	"fecha.h"
+	"proveedorArchivo.h"
+	"productoArchivo.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\ingresosmanager.h
+	"Ingresos.h"
+	"IngresosArchivo.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\proveedorarchivo.h
+	<string>
+	"proveedor.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\proveedor.h
+	<string>
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\main.cpp
+	<iostream>
+	"proveedor.h"
+	"Menu.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\menu.h
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\menu.cpp
+	<iostream>
+	"menu.h"
+	"menuProveedor.h"
+	"menuProducto.h"
+	"menuCliente.h"
+	"menuIngresos.h"
+	"menuEgresos.h"
+	"stockManager.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\menuproveedor.h
+
+1750480347 c:\users\matias pc\desktop\actualizacion\menuproducto.h
+
+1750480347 c:\users\matias pc\desktop\actualizacion\menucliente.h
+
+1750480347 c:\users\matias pc\desktop\actualizacion\menuingresos.h
+
+1750480347 c:\users\matias pc\desktop\actualizacion\menuegresos.h
+
+1750480347 c:\users\matias pc\desktop\actualizacion\stockmanager.h
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\menucliente.cpp
+	<iostream>
+	"menuCliente.h"
+	"clienteManager.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\menuegresos.cpp
+	<iostream>
+	<limits>
+	"menuEgresos.h"
+	"egresosManager.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\menuingresos.cpp
+	<iostream>
+	<cstdlib>
+	<limits>
+	"menuIngresos.h"
+	"ingresosManager.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\menuproducto.cpp
+	<iostream>
+	"menuProducto.h"
+	"productoManager.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\productomanager.h
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\menuproveedor.cpp
+	<iostream>
+	"menuProveedor.h"
+	"ProveedorManager.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\proveedormanager.h
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\producto.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"producto.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\productomanager.cpp
+	<iostream>
+	"productoManager.h"
+	"producto.h"
+	"productoArchivo.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\produtoarchivo.cpp
+	<iostream>
+	"ProductoArchivo.h"
+	"Producto.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\proveedor.cpp
+	<iostream>
+	<cstring>
+	<string>
+	"proveedor.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\proveedorarchivo.cpp
+	<iostream>
+	"proveedorArchivo.h"
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\proveedormanager.cpp
+	<iostream>
+	<string>
+	"proveedorManager.h"
+	"proveedor.h"
+	"proveedorArchivo.h"
+	<limits>
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\stock.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"stockManager.h"
+	"productoArchivo.h"
+	"producto.h"
+	"stock.h"
+	"ingresosArchivo.h"
+	"egresosArchivo.h"
+
+1750480347 c:\users\matias pc\desktop\actualizacion\stock.h
+
+1750480347 source:c:\users\matias pc\desktop\actualizacion\stockmanager.cpp
+	<iostream>
+	<string>
+	<cstring>
+	"stockManager.h"
+	"productoArchivo.h"
+	"producto.h"
+	"stock.h"
+
